@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Deep Learning Channel" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Deep Learning cuda Channel" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="Deep Learning Channel">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/xuehao/PytorchProjects/GIS_Project/HGN_mobility2landuse" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Deep Learning cuda Channel">
         <serverdata>
           <mappings>
             <mapping deploy="/home/xuehao/PytorchProjects/GIS_Project/HGN_mobility2landuse" local="$PROJECT_DIR$" />
