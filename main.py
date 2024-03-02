@@ -13,10 +13,10 @@ parser = argparse.ArgumentParser(description='Train a GNN for land use identifca
 parser.add_argument('--loader_name', type=str, default='Neighbor', choices=['Neighbor', 'RandomNode'], help='Data loader to use (Neighbor or RandomNode).')
 parser.add_argument('--hidden_size', type=int, default=128, help='Hidden size of the model.')
 parser.add_argument('--model_name', type=str, default='GraphSAGE', choices=['GraphSAGE', 'GCNModel', 'GATModel'], help='Model to use for training.')
-parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for the optimizer.')
-parser.add_argument('--epoch_num', type=int, default=20, help='Number of epochs to train.')
+parser.add_argument('--learning_rate', type=float, default=0.002, help='Learning rate for the optimizer.')
+parser.add_argument('--epoch_num', type=int, default=200, help='Number of epochs to train.')
 parser.add_argument('--data_path', type=str, default='data/processed/data.pt', help='Path to the data file.')
-parser.add_argument('--model_save_path', type=str, default='data/models/', help='Path where the trained model should be saved.')
+parser.add_argument('--model_save_path', type=str, default='models/', help='Path where the trained model should be saved.')
 
 # Parse the command-line arguments
 args = parser.parse_args()
@@ -43,10 +43,16 @@ model = get_model(model_name, num_features, hidden_size, num_classes, device)
 optimizer = AdamW(model.parameters(), lr=learning_rate)
 
 ## TRAINING
+loss_history = []
+val_acc_history = []
+test_acc_history = []
 for epoch in range(1, epoch_num + 1):
     loss = train(model, train_loader,optimizer, device)
     val_acc = test(model, val_loader, device)
     test_acc = test(model, test_loader, device)
+    loss_history.append(loss)
+    val_acc_history.append(val_acc)
+    test_acc_history.append(test_acc)
     print(f'Epoch: {epoch:02d}, Loss: {loss:.4f}, ',
           f'Val: {val_acc:.4f} Test: {test_acc:.4f}')
 

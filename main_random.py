@@ -1,18 +1,18 @@
 import pandas as pd
 import numpy as np
 import torch
-from torch_geometric.loader import RandomNodeSampler, ShaDowKHopSampler
+from torch_geometric.loader import RandomNodeSampler, NeighborLoader
 from torch.optim import AdamW
-from models import GraphSAGEModel_s, GCNModel_s, GATModel_s, GraphSAGEModel_r, GCNModel_r, GATModel_r
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-
+from utils import remove_reserved_nodes_and_edges
+from models import get_model
 ## DATA LOADING
 data = torch.load('data/processed/data.pt')
 
 ## MODELLING
 # 1. parameters
 num_features = data.x.shape[1]
-hidden_size = 32
+hidden_size = 128
 num_classes = data.y.shape[1]
 num_heads = 2
 depth = 1  # 采样深度
@@ -21,40 +21,20 @@ model_name = 'GCN'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 sampler_name = 'RandomNode'
 
-kwargs = {'num_workers': 4, 'persistent_workers': True}
+data_for_train_val = remove_reserved_nodes_and_edges(data, data.test_mask)
+kwargs = {'batch_size': 64, 'num_workers': 2, 'persistent_workers': True, 'directed': False}
+# Initialize NeighborLoader for training, validation, and testing
+# The loader fetches neighbors up to 1 layer deep with a maximum of 10 neighbors for each node
+train_loader = NeighborLoader(data_for_train_val, num_neighbors=[10] * 1, input_nodes=data.train_mask, **kwargs)
+val_loader = NeighborLoader(data, num_neighbors=[10] * 1, input_nodes=data.val_mask, **kwargs)
+test_loader = NeighborLoader(data, num_neighbors=[10] * 1, input_nodes=data.test_mask, **kwargs)
 
-train_num_parts = 60
-val_num_parts = 20
-test_num_parts = 20
 
-train_loader = RandomNodeSampler(data, num_parts=train_num_parts, shuffle=True, **kwargs)
-val_loader = RandomNodeSampler(data, num_parts=val_num_parts, shuffle=False, **kwargs)
-test_loader = RandomNodeSampler(data, num_parts=test_num_parts, shuffle=False, **kwargs)
-
-# 2. models building and statement
-model_classes = {
-    'RandomNode': {
-        'GraphSAGE': GraphSAGEModel_r,
-        'GCN': GCNModel_r,
-        'GAT': GATModel_r,
-    },
-    'ShaDowKHop': {
-        'GraphSAGE': GraphSAGEModel_s,
-        'GCN': GCNModel_s,
-        'GAT': GATModel_s,
-    }
-}
-model_class = model_classes[sampler_name].get(model_name)
-
-model_class = model_classes[sampler_name].get(model_name)
-# Instantiate the model if the model class was found
-if model_class:
-    model = model_class(num_features, hidden_size, num_classes).to(device)
-else:
-    raise ValueError(f"Model {model_name} with sampler {sampler_name} is not supported.")
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-optimizer = AdamW(model.parameters(), lr=0.002)
+## MODELLING
+num_features = data.x.shape[1]
+num_classes = data.y.shape[1]
+model = get_model(model_name, num_features, hidden_size, num_classes, device)
+optimizer = AdamW(model.parameters(), lr=0.001)
 
 # 3. models training
 def train():

@@ -78,19 +78,19 @@ def get_loader(data, loader_name):
 
     if loader_name == 'Neighbor':
         # Parameters for NeighborLoader
-        kwargs = {'batch_size': 64, 'num_workers': 2, 'persistent_workers': True, 'subgraph_type': 'induced'}
+        kwargs = {'batch_size': 64, 'num_workers': 4, 'persistent_workers': True, 'subgraph_type': 'induced'}
         # Initialize NeighborLoader for training, validation, and testing
         # The loader fetches neighbors up to 1 layer deep with a maximum of 10 neighbors for each node
-        train_loader = NeighborLoader(data_for_train_val, num_neighbors=[10] * 1, input_nodes=data.train_mask, **kwargs)
-        val_loader = NeighborLoader(data, num_neighbors=[10] * 1, input_nodes=data.val_mask, **kwargs)
-        test_loader = NeighborLoader(data, num_neighbors=[10] * 1, input_nodes=data.test_mask, **kwargs)
+        train_loader = NeighborLoader(data_for_train_val, num_neighbors=[10] * 2, input_nodes=data.train_mask, **kwargs)
+        val_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.val_mask, **kwargs)
+        test_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.test_mask, **kwargs)
 
     elif loader_name == 'RandomNode':
         # Parameters for RandomNodeSampler
         kwargs = {'num_workers': 4, 'persistent_workers': True}
         # Initialize RandomNodeSampler for training, validation, and testing
         # The dataset is divided into parts (60 for training, 20 for validation, and 20 for testing)
-        train_loader = RandomNodeSampler(data, num_parts=60, shuffle=True, **kwargs)
+        train_loader = RandomNodeSampler(data_for_train_val, num_parts=60, shuffle=True, **kwargs)
         val_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
         test_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
 
@@ -187,8 +187,8 @@ def evaluation(model, loader, device):
             actuals[i].extend(data.y[:, i].cpu().numpy())
 
     # Define the indicators and metrics to be evaluated
-    indicators = ['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence']
-    metrics = ['MSE', 'RMSE', 'MAE', 'MAPE', 'R2']
+    indicators = ['office', 'leisure', 'transport', 'retail', 'sustenance', 'residence']
+    metrics = ['MSE', 'RMSE', 'MAE', 'R2']
 
     # Initialize a DataFrame to store the computed metrics
     results_df = pd.DataFrame(columns=metrics)
@@ -198,10 +198,10 @@ def evaluation(model, loader, device):
         mse = mean_squared_error(actuals[i], predictions[i])
         rmse = np.sqrt(mse)
         mae = mean_absolute_error(actuals[i], predictions[i])
-        mape = mean_absolute_percentage_error(actuals[i], predictions[i])
+        # mape = mean_absolute_percentage_error(actuals[i], predictions[i])
         r2 = r2_score(actuals[i], predictions[i])
 
         # Populate the DataFrame with the results
-        results_df.loc[indicator] = [round(mse, 3), round(rmse, 3), round(mae, 3), round(mape, 3), round(r2, 3)]
+        results_df.loc[indicator] = [round(mse, 3), round(rmse, 3), round(mae, 3), round(r2, 3)]
 
     return results_df
