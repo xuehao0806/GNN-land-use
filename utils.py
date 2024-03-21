@@ -2,10 +2,11 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import torch
-from torch_geometric.loader import NeighborLoader, RandomNodeSampler
+from torch_geometric.loader import HGTLoader, NeighborLoader, RandomNodeSampler
+
 
 @torch.no_grad()
-def test(model, loader, device):
+def test(model_name, model, loader, device):
     """
         Evaluate the model performance on a given dataset.
 
@@ -22,14 +23,48 @@ def test(model, loader, device):
     loss_fn = torch.nn.MSELoss() # Define the loss function
     for data in loader: # Iterate over each batch from the loader
         data = data.to(device) # Move the data to the specified device
-        out = model(data.x, data.edge_index) # Forward pass: compute the model output
+        if model_name == 'RGCN':
+            edge_type = data.edge_attr[:, 1:].argmax(dim=1)
+            out = model(data.x, data.edge_index, edge_type)
+        else:
+            out = model(data.x, data.edge_index)  # Forward pass: compute the model output
         loss = loss_fn(out.squeeze(), data.y.float()) # Compute the loss
         total_loss += float(loss) * data.num_nodes  # Aggregate the loss
         total_examples += data.num_nodes  # Count the total number of examples
     return total_loss / total_examples  # Return the average loss
 
 
-def train(model, train_loader, optimizer, device):
+# def train_hetero(model, loader, optimizer, device, node_type):
+#     model.train()
+#
+#     total_loss = total_examples = 0
+#     for batch in tqdm(loader, desc="Training", leave=False):
+#         batch = batch.to(device)
+#         optimizer.zero_grad()
+#
+#         # 对指定节点类型进行操作
+#         if node_type in batch.x_dict:
+#             # 确保节点类型在批次数据中存在
+#             batch_size = batch[node_type].num_nodes
+#
+#             # 通过模型获取该节点类型的输出
+#             out = model(batch.x_dict, batch.edge_index_dict)[node_type]
+#
+#             # 由于是回归问题，这里用mse_loss作为损失函数
+#             # 如果您处理的是分类问题，请根据实际情况调整损失函数
+#             y = batch[node_type].y.float()
+#             loss = F.mse_loss(out, y)
+#
+#             # 反向传播和优化
+#             loss.backward()
+#             optimizer.step()
+#
+#             total_loss += loss.item() * batch_size
+#             total_examples += batch_size
+#
+#     return total_loss / total_examples
+
+def train(model_name, model, train_loader, optimizer, device):
     """
         Train the model using the given training data.
 
@@ -48,7 +83,11 @@ def train(model, train_loader, optimizer, device):
     for data in train_loader:  # Iterate over each batch from the loader
         data = data.to(device)  # Move the data to the specified device
         optimizer.zero_grad()  # Clear the gradients
-        out = model(data.x, data.edge_index)  # Forward pass: compute the model output
+        if model_name == 'RGCN':
+            edge_type = data.edge_attr[:, 1:].argmax(dim=1)
+            out = model(data.x, data.edge_index, edge_type)
+        else:
+            out = model(data.x, data.edge_index)  # Forward pass: compute the model output
         loss = loss_fn(out.squeeze(), data.y.float())  # Compute the loss
         loss.backward()  # Backward pass: compute the gradient
         optimizer.step()  # Update the model parameters
@@ -59,29 +98,28 @@ def train(model, train_loader, optimizer, device):
 # Define a function to initialize loaders
 def get_loader(data, loader_name):
     """
-    Prepares and returns the data loaders for training, validation, and testing datasets.
+        Prepares and returns the data loaders for training, validation, and testing datasets.
 
-    Parameters:
-    - data (torch_geometric.data.Data): The input graph data.
-    - loader_name (str): The name of the loader to use. It should be either 'Neighbor' or 'RandomNode'.
+        Parameters:
+        - data (torch_geometric.data.HeteroData): The input graph data.
+        - loader_name (str): The name of the loader to use. It should be either 'Neighbor', 'RandomNode', or 'HGT'.
 
-    Returns:
-    - train_loader: DataLoader for the training dataset.
-    - val_loader: DataLoader for the validation dataset.
-    - test_loader: DataLoader for the testing dataset.
+        Returns:
+        - train_loader: DataLoader for the training dataset.
+        - val_loader: DataLoader for the validation dataset.
+        - test_loader: DataLoader for the testing dataset.
 
-    Raises:
-    - ValueError: If the loader_name is not recognized.
-    """
+        Raises:
+        - ValueError: If the loader_name is not recognized.
+        """
     # Preprocess the data by removing edges and nodes related to the test set to avoid data leakage
-    data_for_train_val = remove_reserved_nodes_and_edges(data, data.test_mask)
 
     if loader_name == 'Neighbor':
         # Parameters for NeighborLoader
         kwargs = {'batch_size': 64, 'num_workers': 4, 'persistent_workers': True, 'subgraph_type': 'induced'}
         # Initialize NeighborLoader for training, validation, and testing
         # The loader fetches neighbors up to 1 layer deep with a maximum of 10 neighbors for each node
-        train_loader = NeighborLoader(data_for_train_val, num_neighbors=[10] * 2, input_nodes=data.train_mask, **kwargs)
+        train_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.train_mask, **kwargs)
         val_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.val_mask, **kwargs)
         test_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.test_mask, **kwargs)
 
@@ -90,7 +128,7 @@ def get_loader(data, loader_name):
         kwargs = {'num_workers': 4, 'persistent_workers': True}
         # Initialize RandomNodeSampler for training, validation, and testing
         # The dataset is divided into parts (60 for training, 20 for validation, and 20 for testing)
-        train_loader = RandomNodeSampler(data_for_train_val, num_parts=60, shuffle=True, **kwargs)
+        train_loader = RandomNodeSampler(data, num_parts=60, shuffle=True, **kwargs)
         val_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
         test_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
 
@@ -101,46 +139,46 @@ def get_loader(data, loader_name):
     return train_loader, val_loader, test_loader
 
 
-def remove_reserved_nodes_and_edges(data, reserved_node_mask):
-    """
-    Modifies the input graph data by removing the edges connected to reserved nodes
-    and zeroing out features for these nodes to prevent data leakage during training.
-
-    Parameters:
-    - data (torch_geometric.data.Data): The input graph data.
-    - reserved_node_mask (torch.Tensor): A boolean mask indicating which nodes are reserved (e.g., for testing).
-
-    Returns:
-    - data_sub (torch_geometric.data.Data): The modified graph data with reserved nodes and edges removed.
-    """
-    # Retrieve the indices of reserved nodes
-    reserved_nodes = reserved_node_mask.nonzero().squeeze()
-    # Clone the input data to avoid modifying the original graph
-    data_sub = data.clone()
-    # Initialize a mask to identify edges that should be retained
-    edge_mask = torch.ones(data_sub.edge_index.size(1), dtype=torch.bool)
-
-    # Iterate over reserved nodes to update the edge mask, marking edges connected to these nodes for removal
-    for node in reserved_nodes:
-        # Mark all outgoing and incoming edges of the reserved node as False (to be removed)
-        edge_mask[data_sub.edge_index[0] == node] = False
-        edge_mask[data_sub.edge_index[1] == node] = False
-
-    # Apply the mask to filter out edges connected to reserved nodes
-    data_sub.edge_index = data_sub.edge_index[:, edge_mask]
-
-    # If edge attributes exist, filter them out as well
-    if hasattr(data_sub, 'edge_attr'):
-        data_sub.edge_attr = data_sub.edge_attr[edge_mask]
-
-    # Zero out the features of reserved nodes to prevent their influence during training/validation
-    data_sub.x[reserved_nodes] = 0
-    # Update the masks to exclude reserved nodes from being considered in respective phases (training/validation/testing)
-    data_sub.train_mask[reserved_nodes] = False
-    data_sub.val_mask[reserved_nodes] = False
-    data_sub.test_mask[reserved_nodes] = False
-
-    return data_sub
+# def remove_reserved_nodes_and_edges(data, reserved_node_mask):
+#     """
+#     Modifies the input graph data by removing the edges connected to reserved nodes
+#     and zeroing out features for these nodes to prevent data leakage during training.
+#
+#     Parameters:
+#     - data (torch_geometric.data.Data): The input graph data.
+#     - reserved_node_mask (torch.Tensor): A boolean mask indicating which nodes are reserved (e.g., for testing).
+#
+#     Returns:
+#     - data_sub (torch_geometric.data.Data): The modified graph data with reserved nodes and edges removed.
+#     """
+#     # Retrieve the indices of reserved nodes
+#     reserved_nodes = reserved_node_mask.nonzero().squeeze()
+#     # Clone the input data to avoid modifying the original graph
+#     data_sub = data.clone()
+#     # Initialize a mask to identify edges that should be retained
+#     edge_mask = torch.ones(data_sub.edge_index.size(1), dtype=torch.bool)
+#
+#     # Iterate over reserved nodes to update the edge mask, marking edges connected to these nodes for removal
+#     for node in reserved_nodes:
+#         # Mark all outgoing and incoming edges of the reserved node as False (to be removed)
+#         edge_mask[data_sub.edge_index[0] == node] = False
+#         edge_mask[data_sub.edge_index[1] == node] = False
+#
+#     # Apply the mask to filter out edges connected to reserved nodes
+#     data_sub.edge_index = data_sub.edge_index[:, edge_mask]
+#
+#     # If edge attributes exist, filter them out as well
+#     if hasattr(data_sub, 'edge_attr'):
+#         data_sub.edge_attr = data_sub.edge_attr[edge_mask]
+#
+#     # Zero out the features of reserved nodes to prevent their influence during training/validation
+#     data_sub.x[reserved_nodes] = 0
+#     # Update the masks to exclude reserved nodes from being considered in respective phases (training/validation/testing)
+#     data_sub.train_mask[reserved_nodes] = False
+#     data_sub.val_mask[reserved_nodes] = False
+#     data_sub.test_mask[reserved_nodes] = False
+#
+#     return data_sub
 
 def mean_absolute_percentage_error(y_true, y_pred):
     """
@@ -160,7 +198,7 @@ def mean_absolute_percentage_error(y_true, y_pred):
     return np.mean(np.abs((y_true[non_zero_mask] - y_pred[non_zero_mask]) / y_true[non_zero_mask])) * 100
 
 # 1. evaluation
-def evaluation(model, loader, device):
+def evaluation(model_name, model, loader, device):
     """
     Evaluate the model using the provided loader and compute various metrics.
 
@@ -180,15 +218,19 @@ def evaluation(model, loader, device):
     # Iterate over the loader to collect model predictions and actual values
     for data in loader:
         data = data.to(device)
-        out = model(data.x, data.edge_index)  # Get model predictions
+        if model_name == 'RGCN':
+            edge_type = data.edge_attr[:, 1:].argmax(dim=1)
+            out = model(data.x, data.edge_index, edge_type)
+        else:
+            out = model(data.x, data.edge_index)  # Forward pass: compute the model output
         # Store predictions and actuals for each indicator
         for i in range(6):
             predictions[i].extend(out[:, i].cpu().detach().numpy())
             actuals[i].extend(data.y[:, i].cpu().numpy())
 
     # Define the indicators and metrics to be evaluated
-    indicators = ['office', 'leisure', 'transport', 'retail', 'sustenance', 'residence']
-    metrics = ['MSE', 'RMSE', 'MAE', 'R2']
+    indicators = ['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence']
+    metrics = ['MSE', 'RMSE', 'MAE', 'R2'] #'MAPE',
 
     # Initialize a DataFrame to store the computed metrics
     results_df = pd.DataFrame(columns=metrics)

@@ -1,13 +1,13 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # 文件列表
 
 path = "./label/"
 files = [
-    "merged_bikelocation_POI_filtered.csv",
-    "merged_buslocation_POI_filtered.csv",
-    "merged_trainlocation_POI_filtered.csv"
+    "merged_bikelocation_POI_filtered_wr.csv",
+    "merged_buslocation_POI_filtered_wr.csv",
+    "merged_trainlocation_POI_filtered_wr.csv"
 ]
 
 # 分组和对应列名的字典
@@ -41,8 +41,7 @@ groups = {
         "leisure_nature_reserve_count"
     ],
     "residence": [
-        "building_residential_count", "building_house_count", "building_detached_count",
-        "building_apartments_count", "building_bungalow_count"
+        "population_density"
     ]
 }
 
@@ -63,20 +62,22 @@ for file in files:
         "shop_clothes_count", "shop_hardware_count", "shop_furniture_count", "shop_electronics_count", "leisure_park_count",
         "leisure_sports_centre_count", "leisure_playground_count", "leisure_stadium_count", "leisure_swimming_pool_count",
         "leisure_pitch_count", "leisure_track_count", "leisure_fitness_centre_count", "leisure_garden_count",
-        "leisure_nature_reserve_count", "building_residential_count", "building_house_count", "building_detached_count",
-        "building_apartments_count", "building_bungalow_count"]
+        "leisure_nature_reserve_count", "population_density"]
+    # scaler = MinMaxScaler()
     scaler = StandardScaler()
     df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
 
     # 构建新表
     new_df = pd.DataFrame(df['LocationID'])
 
+    # 为每个分组计算均值，并进行再次标准化处理
+    scaler_group = StandardScaler()
     for group_name, columns in groups.items():
-        # 计算每个分组的均值
-        new_df[group_name] = df[columns].mean(axis=1)
+        group_means = df[columns].mean(axis=1).to_frame(name=group_name)
+        new_df[group_name] = scaler_group.fit_transform(group_means)
 
     # 保存新表到CSV
-    new_file_name = path + "processed_" + file
+    new_file_name = path + "zscore_processed_" + file
     new_df.to_csv(new_file_name, index=False)
 
     print(f"Processed and saved {new_file_name}")
