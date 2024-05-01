@@ -216,6 +216,7 @@ def evaluation(model_name, model, loader, device):
     actuals = {i: [] for i in range(6)}
 
     # Iterate over the loader to collect model predictions and actual values
+    torch.manual_seed(42)
     for data in loader:
         data = data.to(device)
         if model_name == "HGT":
