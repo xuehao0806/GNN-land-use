@@ -218,15 +218,22 @@ def evaluation(model_name, model, loader, device):
     # Iterate over the loader to collect model predictions and actual values
     for data in loader:
         data = data.to(device)
-        if model_name == 'RGCN':
+        if model_name == "HGT":
+            out = model(data.x_dict, data.edge_index_dict)
+        elif model_name == 'RGCN':
             edge_type = data.edge_attr[:, 1:].argmax(dim=1)
             out = model(data.x, data.edge_index, edge_type)
         else:
             out = model(data.x, data.edge_index)  # Forward pass: compute the model output
         # Store predictions and actuals for each indicator
-        for i in range(6):
-            predictions[i].extend(out[:, i].cpu().detach().numpy())
-            actuals[i].extend(data.y[:, i].cpu().numpy())
+        if model_name == "HGT":
+            for i in range(6):
+                predictions[i].extend(out[:, i].cpu().detach().numpy())
+                actuals[i].extend(data["node"].y[:, i].cpu().numpy())
+        else:
+            for i in range(6):
+                predictions[i].extend(out[:, i].cpu().detach().numpy())
+                actuals[i].extend(data.y[:, i].cpu().numpy())
 
     # Define the indicators and metrics to be evaluated
     indicators = ['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence']
