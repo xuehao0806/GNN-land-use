@@ -87,30 +87,30 @@ results = evaluation(model_name, model, test_loader, device)
 torch.save(model.state_dict(), f'{model_save_path}{model_name}_{loader_name}.pth')
 print(results)
 
-@torch.no_grad()  # Disable gradient computation, reduce memory usage
-def calculate_residuals(model, loader):
-    model.eval()  # Switch to evaluation mode
-    residuals = []
+# @torch.no_grad()  # Disable gradient computation, reduce memory usage
+# def calculate_residuals(model, loader):
+#     model.eval()  # Switch to evaluation mode
+#     residuals = []
 
-    for batch in loader:
-        batch = batch.to(device)
-        pred = model(batch.x_dict, batch.edge_index_dict)  # Model prediction
-        true = batch['node'].y.float()  # True labels
+#     for batch in loader:
+#         batch = batch.to(device)
+#         pred = model(batch.x_dict, batch.edge_index_dict)  # Model prediction
+#         true = batch['node'].y.float()  # True labels
 
-        # Calculate residuals: the difference between predictions and true values
-        residual = (pred - true).cpu().numpy()  # Move to CPU and convert to NumPy array
-        residuals.extend(residual)
+#         # Calculate residuals: the difference between predictions and true values
+#         residual = (pred - true).cpu().numpy()  # Move to CPU and convert to NumPy array
+#         residuals.extend(residual)
 
-    # Combine all residuals into a DataFrame
-    residuals_df = pd.DataFrame(residuals, columns=['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence'])
-    return residuals_df
+#     # Combine all residuals into a DataFrame
+#     residuals_df = pd.DataFrame(residuals, columns=['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence'])
+#     return residuals_df
 
-# Modify batch size, if memory is sufficient, can load all nodes at once
-kwargs = {'batch_size': 4236, 'num_workers': 0, 'persistent_workers': False}
+# # Modify batch size, if memory is sufficient, can load all nodes at once
+# kwargs = {'batch_size': 4236, 'num_workers': 0, 'persistent_workers': False}
 
-# Create a loader to load the entire dataset
-full_loader = HGTLoader(data, num_samples={'node': [4236]}, shuffle=False,
-                        input_nodes=('node', torch.ones(data['node'].num_nodes, dtype=bool)), **kwargs)
+# # Create a loader to load the entire dataset
+# full_loader = HGTLoader(data, num_samples={'node': [4236]}, shuffle=False,
+#                         input_nodes=('node', torch.ones(data['node'].num_nodes, dtype=bool)), **kwargs)
 
-residuals_df = calculate_residuals(model, full_loader)
-residuals_df.to_csv(f'./visualisation/residual/{model_name}_{loader_name}.csv')
+# residuals_df = calculate_residuals(model, full_loader)
+# residuals_df.to_csv(f'./visualisation/residual/{model_name}_{loader_name}.csv')
