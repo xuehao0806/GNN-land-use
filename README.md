@@ -1,5 +1,4 @@
-# Project Name: 
-
+# Project Name 
 Explainable Heterogeneous Graph Neural Network for Urban Land Use Inference. 
 
 ## Overview
