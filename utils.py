@@ -96,47 +96,149 @@ def train(model_name, model, train_loader, optimizer, device):
     return total_loss / total_examples  # Return the average loss
 
 # Define a function to initialize loaders
-def get_loader(data, loader_name):
+
+# Define a function to initialize loaders
+def add_gaussian_mixture_noise(data, mask, noise_levels=[0.1, 0.5], proportions=[0.5, 0.5]):
     """
-        Prepares and returns the data loaders for training, validation, and testing datasets.
+    Adds Gaussian mixture noise to the data features.
 
-        Parameters:
-        - data (torch_geometric.data.HeteroData): The input graph data.
-        - loader_name (str): The name of the loader to use. It should be either 'Neighbor', 'RandomNode', or 'HGT'.
+    Parameters:
+    - data (torch_geometric.data.HeteroData): The input graph data.
+    - mask (torch.Tensor): Mask indicating which nodes to perturb.
+    - noise_levels (list of float): The standard deviations for the Gaussian noises.
+    - proportions (list of float): The proportions of the data to which each noise is applied.
 
-        Returns:
-        - train_loader: DataLoader for the training dataset.
-        - val_loader: DataLoader for the validation dataset.
-        - test_loader: DataLoader for the testing dataset.
+    Returns:
+    - data (torch_geometric.data.HeteroData): The data with added Gaussian mixture noise.
+    """
+    assert len(noise_levels) == len(proportions), "Noise levels and proportions must have the same length."
 
-        Raises:
-        - ValueError: If the loader_name is not recognized.
-        """
+    for noise_level, proportion in zip(noise_levels, proportions):
+        num_noisy_nodes = int(proportion * mask.sum())
+        selected_mask = torch.randperm(mask.sum())[:num_noisy_nodes]
+        noise = noise_level * torch.randn_like(data.x[selected_mask])
+        data.x[selected_mask] += noise
+
+    return data
+
+
+def get_loader(data, loader_name, sampling_ratio=1.0, noise_coefficient=0.1):
+    """
+    Prepares and returns the data loaders for training, validation, and testing datasets.
+
+    Parameters:
+    - data (torch_geometric.data.HeteroData): The input graph data.
+    - loader_name (str): The name of the loader to use. It should be either 'Neighbor', 'RandomNode', or 'HGT'.
+    - sampling_ratio (float): The ratio of data to sample for each loader (between 0 and 1).
+    - noise_coefficient (float): The coefficient for the noise added to val_loader's and test_loader's node features (between 0 and 1).
+
+    Returns:
+    - train_loader: DataLoader for the training dataset.
+    - val_loader: DataLoader for the validation dataset with added noise.
+    - test_loader: DataLoader for the testing dataset with added noise.
+
+    Raises:
+    - ValueError: If the loader_name is not recognized.
+    """
+
     # Preprocess the data by removing edges and nodes related to the test set to avoid data leakage
+    def subsample_mask(mask, ratio):
+        """
+        Subsamples a boolean mask to include only the specified ratio of True values.
+        """
+        indices = torch.nonzero(mask).view(-1)
+        num_samples = int(len(indices) * ratio)
+        sampled_indices = indices[torch.randperm(len(indices))[:num_samples]]
+        new_mask = torch.zeros_like(mask)
+        new_mask[sampled_indices] = True
+        return new_mask
+
+    train_mask = subsample_mask(data.train_mask, sampling_ratio)
+    val_mask = data.val_mask
+    test_mask = data.test_mask
+
+    # Add Gaussian mixture noise to the node features in the validation and test sets
+    if noise_coefficient > 0:
+        noise_levels = [0.1 * noise_coefficient, 0.5 * noise_coefficient]  # Adjust noise levels based on coefficient
+        proportions = [0.7, 0.3]  # 70% of nodes get lower noise, 30% get higher noise
+        data = add_gaussian_mixture_noise(data, val_mask, noise_levels=noise_levels, proportions=proportions)
+        data = add_gaussian_mixture_noise(data, test_mask, noise_levels=noise_levels, proportions=proportions)
 
     if loader_name == 'Neighbor':
         # Parameters for NeighborLoader
         kwargs = {'batch_size': 64, 'num_workers': 4, 'persistent_workers': True, 'subgraph_type': 'induced'}
-        # Initialize NeighborLoader for training, validation, and testing
-        # The loader fetches neighbors up to 1 layer deep with a maximum of 10 neighbors for each node
-        train_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.train_mask, **kwargs)
-        val_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.val_mask, **kwargs)
-        test_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.test_mask, **kwargs)
+        # Initialize NeighborLoader for training, validation, and testing with subsampled masks
+        train_loader = NeighborLoader(
+            data, num_neighbors=[10] * 2, input_nodes=train_mask, **kwargs
+        )
+        val_loader = NeighborLoader(
+            data, num_neighbors=[10] * 2, input_nodes=val_mask, **kwargs
+        )
+        test_loader = NeighborLoader(
+            data, num_neighbors=[10] * 2, input_nodes=test_mask, **kwargs
+        )
 
     elif loader_name == 'RandomNode':
         # Parameters for RandomNodeSampler
         kwargs = {'num_workers': 4, 'persistent_workers': True}
-        # Initialize RandomNodeSampler for training, validation, and testing
-        # The dataset is divided into parts (60 for training, 20 for validation, and 20 for testing)
-        train_loader = RandomNodeSampler(data, num_parts=60, shuffle=True, **kwargs)
-        val_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
-        test_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
+        # Initialize RandomNodeSampler for training, validation, and testing with subsampled masks
+        train_loader = RandomNodeSampler(
+            data, num_parts=int(60 * sampling_ratio), shuffle=True, **kwargs
+        )
+        val_loader = RandomNodeSampler(
+            data, num_parts=int(20 * sampling_ratio), shuffle=False, **kwargs
+        )
+        test_loader = RandomNodeSampler(
+            data, num_parts=int(20 * sampling_ratio), shuffle=False, **kwargs
+        )
 
     else:
         # Raise an error if an unsupported loader name is provided
         raise ValueError(f"Unsupported loader name: {loader_name}")
 
     return train_loader, val_loader, test_loader
+
+# def get_loader(data, loader_name):
+#     """
+#         Prepares and returns the data loaders for training, validation, and testing datasets.
+#
+#         Parameters:
+#         - data (torch_geometric.data.HeteroData): The input graph data.
+#         - loader_name (str): The name of the loader to use. It should be either 'Neighbor', 'RandomNode', or 'HGT'.
+#
+#         Returns:
+#         - train_loader: DataLoader for the training dataset.
+#         - val_loader: DataLoader for the validation dataset.
+#         - test_loader: DataLoader for the testing dataset.
+#
+#         Raises:
+#         - ValueError: If the loader_name is not recognized.
+#         """
+#     # Preprocess the data by removing edges and nodes related to the test set to avoid data leakage
+#
+#     if loader_name == 'Neighbor':
+#         # Parameters for NeighborLoader
+#         kwargs = {'batch_size': 64, 'num_workers': 4, 'persistent_workers': True, 'subgraph_type': 'induced'}
+#         # Initialize NeighborLoader for training, validation, and testing
+#         # The loader fetches neighbors up to 1 layer deep with a maximum of 10 neighbors for each node
+#         train_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.train_mask, **kwargs)
+#         val_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.val_mask, **kwargs)
+#         test_loader = NeighborLoader(data, num_neighbors=[10] * 2, input_nodes=data.test_mask, **kwargs)
+#
+#     elif loader_name == 'RandomNode':
+#         # Parameters for RandomNodeSampler
+#         kwargs = {'num_workers': 4, 'persistent_workers': True}
+#         # Initialize RandomNodeSampler for training, validation, and testing
+#         # The dataset is divided into parts (60 for training, 20 for validation, and 20 for testing)
+#         train_loader = RandomNodeSampler(data, num_parts=60, shuffle=True, **kwargs)
+#         val_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
+#         test_loader = RandomNodeSampler(data, num_parts=20, shuffle=False, **kwargs)
+#
+#     else:
+#         # Raise an error if an unsupported loader name is provided
+#         raise ValueError(f"Unsupported loader name: {loader_name}")
+#
+#     return train_loader, val_loader, test_loader
 
 
 # def remove_reserved_nodes_and_edges(data, reserved_node_mask):

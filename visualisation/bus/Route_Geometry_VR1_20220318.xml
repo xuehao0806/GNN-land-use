@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rg:Network_Data xmlns:rg="http://www.tfl.uk/CDII/Route_Geometry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.tfl.uk/CDII/Route_Geometry ../Schema/Route_Geometry.xsd">
+	<Base_Version>20220318</Base_Version>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="1">
+		<Direction>1</Direction>
+		<Location_Easting>546440</Location_Easting>
+		<Location_Northing>170118</Location_Northing>
+		<Location_Longitude>0.104289</Location_Longitude>
+		<Location_Latitude>51.411179</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="2">
+		<Direction>1</Direction>
+		<Location_Easting>546463</Location_Easting>
+		<Location_Northing>170111</Location_Northing>
+		<Location_Longitude>0.104616</Location_Longitude>
+		<Location_Latitude>51.411111</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="3">
+		<Direction>1</Direction>
+		<Location_Easting>546474</Location_Easting>
+		<Location_Northing>170107</Location_Northing>
+		<Location_Longitude>0.104773</Location_Longitude>
+		<Location_Latitude>51.411072</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="4">
+		<Direction>1</Direction>
+		<Location_Easting>546500</Location_Easting>
+		<Location_Northing>170094</Location_Northing>
+		<Location_Longitude>0.105141</Location_Longitude>
+		<Location_Latitude>51.410948</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="5">
+		<Direction>1</Direction>
+		<Location_Easting>546526</Location_Easting>
+		<Location_Northing>170074</Location_Northing>
+		<Location_Longitude>0.105506</Location_Longitude>
+		<Location_Latitude>51.410762</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="6">
+		<Direction>1</Direction>
+		<Location_Easting>546629</Location_Easting>
+		<Location_Northing>169954</Location_Northing>
+		<Location_Longitude>0.106936</Location_Longitude>
+		<Location_Latitude>51.409657</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="7">
+		<Direction>1</Direction>
+		<Location_Easting>546650</Location_Easting>
+		<Location_Northing>169869</Location_Northing>
+		<Location_Longitude>0.107203</Location_Longitude>
+		<Location_Latitude>51.408888</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="8">
+		<Direction>1</Direction>
+		<Location_Easting>546440</Location_Easting>
+		<Location_Northing>169849</Location_Northing>
+		<Location_Longitude>0.104178</Location_Longitude>
+		<Location_Latitude>51.408762</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="9">
+		<Direction>1</Direction>
+		<Location_Easting>546462</Location_Easting>
+		<Location_Northing>169628</Location_Northing>
+		<Location_Longitude>0.104403</Location_Longitude>
+		<Location_Latitude>51.406771</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="10">
+		<Direction>1</Direction>
+		<Location_Easting>546455</Location_Easting>
+		<Location_Northing>169500</Location_Northing>
+		<Location_Longitude>0.104249</Location_Longitude>
+		<Location_Latitude>51.405623</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="11">
+		<Direction>1</Direction>
+		<Location_Easting>546431</Location_Easting>
+		<Location_Northing>169349</Location_Northing>
+		<Location_Longitude>0.103842</Location_Longitude>
+		<Location_Latitude>51.404272</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="12">
+		<Direction>1</Direction>
+		<Location_Easting>546101</Location_Easting>
+		<Location_Northing>169404</Location_Northing>
+		<Location_Longitude>0.099124</Location_Longitude>
+		<Location_Latitude>51.404851</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="13">
+		<Direction>1</Direction>
+		<Location_Easting>546065</Location_Easting>
+		<Location_Northing>169417</Location_Northing>
+		<Location_Longitude>0.098612</Location_Longitude>
+		<Location_Latitude>51.404977</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="14">
+		<Direction>1</Direction>
+		<Location_Easting>546019</Location_Easting>
+		<Location_Northing>169447</Location_Northing>
+		<Location_Longitude>0.097963</Location_Longitude>
+		<Location_Latitude>51.405259</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="15">
+		<Direction>1</Direction>
+		<Location_Easting>545974</Location_Easting>
+		<Location_Northing>169506</Location_Northing>
+		<Location_Longitude>0.097341</Location_Longitude>
+		<Location_Latitude>51.405801</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="16">
+		<Direction>1</Direction>
+		<Location_Easting>545938</Location_Easting>
+		<Location_Northing>169594</Location_Northing>
+		<Location_Longitude>0.096860</Location_Longitude>
+		<Location_Latitude>51.406601</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="17">
+		<Direction>1</Direction>
+		<Location_Easting>545878</Location_Easting>
+		<Location_Northing>169644</Location_Northing>
+		<Location_Longitude>0.096018</Location_Longitude>
+		<Location_Latitude>51.407065</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="18">
+		<Direction>1</Direction>
+		<Location_Easting>545791</Location_Easting>
+		<Location_Northing>169563</Location_Northing>
+		<Location_Longitude>0.094735</Location_Longitude>
+		<Location_Latitude>51.406360</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="19">
+		<Direction>1</Direction>
+		<Location_Easting>545589</Location_Easting>
+		<Location_Northing>169433</Location_Northing>
+		<Location_Longitude>0.091780</Location_Longitude>
+		<Location_Latitude>51.405244</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="20">
+		<Direction>1</Direction>
+		<Location_Easting>545500</Location_Easting>
+		<Location_Northing>169351</Location_Northing>
+		<Location_Longitude>0.090467</Location_Longitude>
+		<Location_Latitude>51.404530</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="21">
+		<Direction>1</Direction>
+		<Location_Easting>545450</Location_Easting>
+		<Location_Northing>169268</Location_Northing>
+		<Location_Longitude>0.089715</Location_Longitude>
+		<Location_Latitude>51.403797</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="22">
+		<Direction>1</Direction>
+		<Location_Easting>545351</Location_Easting>
+		<Location_Northing>168961</Location_Northing>
+		<Location_Longitude>0.088167</Location_Longitude>
+		<Location_Latitude>51.401064</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="23">
+		<Direction>1</Direction>
+		<Location_Easting>545475</Location_Easting>
+		<Location_Northing>168899</Location_Northing>
+		<Location_Longitude>0.089923</Location_Longitude>
+		<Location_Latitude>51.400475</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="24">
+		<Direction>1</Direction>
+		<Location_Easting>545753</Location_Easting>
+		<Location_Northing>168807</Location_Northing>
+		<Location_Longitude>0.093879</Location_Longitude>
+		<Location_Latitude>51.399577</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="25">
+		<Direction>1</Direction>
+		<Location_Easting>545828</Location_Easting>
+		<Location_Northing>168793</Location_Northing>
+		<Location_Longitude>0.094951</Location_Longitude>
+		<Location_Latitude>51.399431</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="26">
+		<Direction>1</Direction>
+		<Location_Easting>545914</Location_Easting>
+		<Location_Northing>168751</Location_Northing>
+		<Location_Longitude>0.096169</Location_Longitude>
+		<Location_Latitude>51.399032</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="27">
+		<Direction>1</Direction>
+		<Location_Easting>546136</Location_Easting>
+		<Location_Northing>168664</Location_Northing>
+		<Location_Longitude>0.099322</Location_Longitude>
+		<Location_Latitude>51.398193</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="28">
+		<Direction>1</Direction>
+		<Location_Easting>546196</Location_Easting>
+		<Location_Northing>168654</Location_Northing>
+		<Location_Longitude>0.100180</Location_Longitude>
+		<Location_Latitude>51.398088</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="29">
+		<Direction>1</Direction>
+		<Location_Easting>546268</Location_Easting>
+		<Location_Northing>168610</Location_Northing>
+		<Location_Longitude>0.101196</Location_Longitude>
+		<Location_Latitude>51.397674</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="30">
+		<Direction>1</Direction>
+		<Location_Easting>546399</Location_Easting>
+		<Location_Northing>168548</Location_Northing>
+		<Location_Longitude>0.103053</Location_Longitude>
+		<Location_Latitude>51.397083</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="31">
+		<Direction>1</Direction>
+		<Location_Easting>546424</Location_Easting>
+		<Location_Northing>168554</Location_Northing>
+		<Location_Longitude>0.103414</Location_Longitude>
+		<Location_Latitude>51.397131</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="32">
+		<Direction>1</Direction>
+		<Location_Easting>546485</Location_Easting>
+		<Location_Northing>168606</Location_Northing>
+		<Location_Longitude>0.104312</Location_Longitude>
+		<Location_Latitude>51.397582</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="33">
+		<Direction>1</Direction>
+		<Location_Easting>546530</Location_Easting>
+		<Location_Northing>168631</Location_Northing>
+		<Location_Longitude>0.104968</Location_Longitude>
+		<Location_Latitude>51.397795</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="34">
+		<Direction>1</Direction>
+		<Location_Easting>546592</Location_Easting>
+		<Location_Northing>168642</Location_Northing>
+		<Location_Longitude>0.105864</Location_Longitude>
+		<Location_Latitude>51.397878</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="35">
+		<Direction>1</Direction>
+		<Location_Easting>546637</Location_Easting>
+		<Location_Northing>168632</Location_Northing>
+		<Location_Longitude>0.106506</Location_Longitude>
+		<Location_Latitude>51.397776</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="36">
+		<Direction>1</Direction>
+		<Location_Easting>546693</Location_Easting>
+		<Location_Northing>168591</Location_Northing>
+		<Location_Longitude>0.107293</Location_Longitude>
+		<Location_Latitude>51.397393</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="37">
+		<Direction>1</Direction>
+		<Location_Easting>546682</Location_Easting>
+		<Location_Northing>168551</Location_Northing>
+		<Location_Longitude>0.107119</Location_Longitude>
+		<Location_Latitude>51.397037</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="38">
+		<Direction>1</Direction>
+		<Location_Easting>546697</Location_Easting>
+		<Location_Northing>168389</Location_Northing>
+		<Location_Longitude>0.107268</Location_Longitude>
+		<Location_Latitude>51.395577</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="39">
+		<Direction>1</Direction>
+		<Location_Easting>546691</Location_Easting>
+		<Location_Northing>168372</Location_Northing>
+		<Location_Longitude>0.107174</Location_Longitude>
+		<Location_Latitude>51.395426</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="40">
+		<Direction>1</Direction>
+		<Location_Easting>546722</Location_Easting>
+		<Location_Northing>168345</Location_Northing>
+		<Location_Longitude>0.107608</Location_Longitude>
+		<Location_Latitude>51.395176</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="41">
+		<Direction>1</Direction>
+		<Location_Easting>546973</Location_Easting>
+		<Location_Northing>168343</Location_Northing>
+		<Location_Longitude>0.111213</Location_Longitude>
+		<Location_Latitude>51.395092</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="42">
+		<Direction>1</Direction>
+		<Location_Easting>547005</Location_Easting>
+		<Location_Northing>168358</Location_Northing>
+		<Location_Longitude>0.111679</Location_Longitude>
+		<Location_Latitude>51.395219</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="43">
+		<Direction>1</Direction>
+		<Location_Easting>547025</Location_Easting>
+		<Location_Northing>168357</Location_Northing>
+		<Location_Longitude>0.111966</Location_Longitude>
+		<Location_Latitude>51.395205</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="44">
+		<Direction>1</Direction>
+		<Location_Easting>547016</Location_Easting>
+		<Location_Northing>168200</Location_Northing>
+		<Location_Longitude>0.111771</Location_Longitude>
+		<Location_Latitude>51.393797</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="45">
+		<Direction>1</Direction>
+		<Location_Easting>546870</Location_Easting>
+		<Location_Northing>167564</Location_Northing>
+		<Location_Longitude>0.109411</Location_Longitude>
+		<Location_Latitude>51.388120</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="46">
+		<Direction>1</Direction>
+		<Location_Easting>546757</Location_Easting>
+		<Location_Northing>167220</Location_Northing>
+		<Location_Longitude>0.107646</Location_Longitude>
+		<Location_Latitude>51.385058</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="47">
+		<Direction>1</Direction>
+		<Location_Easting>546746</Location_Easting>
+		<Location_Northing>167168</Location_Northing>
+		<Location_Longitude>0.107467</Location_Longitude>
+		<Location_Latitude>51.384594</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="48">
+		<Direction>1</Direction>
+		<Location_Easting>546743</Location_Easting>
+		<Location_Northing>167061</Location_Northing>
+		<Location_Longitude>0.107380</Location_Longitude>
+		<Location_Latitude>51.383633</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="49">
+		<Direction>1</Direction>
+		<Location_Easting>546780</Location_Easting>
+		<Location_Northing>166941</Location_Northing>
+		<Location_Longitude>0.107862</Location_Longitude>
+		<Location_Latitude>51.382545</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="50">
+		<Direction>1</Direction>
+		<Location_Easting>546769</Location_Easting>
+		<Location_Northing>166908</Location_Northing>
+		<Location_Longitude>0.107690</Location_Longitude>
+		<Location_Latitude>51.382252</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="51">
+		<Direction>1</Direction>
+		<Location_Easting>546710</Location_Easting>
+		<Location_Northing>166865</Location_Northing>
+		<Location_Longitude>0.106825</Location_Longitude>
+		<Location_Latitude>51.381881</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="52">
+		<Direction>1</Direction>
+		<Location_Easting>546622</Location_Easting>
+		<Location_Northing>166829</Location_Northing>
+		<Location_Longitude>0.105546</Location_Longitude>
+		<Location_Latitude>51.381580</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="53">
+		<Direction>1</Direction>
+		<Location_Easting>546510</Location_Easting>
+		<Location_Northing>166724</Location_Northing>
+		<Location_Longitude>0.103895</Location_Longitude>
+		<Location_Latitude>51.380665</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="54">
+		<Direction>1</Direction>
+		<Location_Easting>546455</Location_Easting>
+		<Location_Northing>166619</Location_Northing>
+		<Location_Longitude>0.103062</Location_Longitude>
+		<Location_Latitude>51.379736</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="55">
+		<Direction>1</Direction>
+		<Location_Easting>546374</Location_Easting>
+		<Location_Northing>166512</Location_Northing>
+		<Location_Longitude>0.101855</Location_Longitude>
+		<Location_Latitude>51.378796</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="56">
+		<Direction>1</Direction>
+		<Location_Easting>546281</Location_Easting>
+		<Location_Northing>166358</Location_Northing>
+		<Location_Longitude>0.100456</Location_Longitude>
+		<Location_Latitude>51.377436</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="57">
+		<Direction>1</Direction>
+		<Location_Easting>546229</Location_Easting>
+		<Location_Northing>166237</Location_Northing>
+		<Location_Longitude>0.099660</Location_Longitude>
+		<Location_Latitude>51.376362</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="58">
+		<Direction>1</Direction>
+		<Location_Easting>546171</Location_Easting>
+		<Location_Northing>166071</Location_Northing>
+		<Location_Longitude>0.098759</Location_Longitude>
+		<Location_Latitude>51.374885</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="59">
+		<Direction>1</Direction>
+		<Location_Easting>546133</Location_Easting>
+		<Location_Northing>165997</Location_Northing>
+		<Location_Longitude>0.098183</Location_Longitude>
+		<Location_Latitude>51.374230</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="60">
+		<Direction>1</Direction>
+		<Location_Easting>546102</Location_Easting>
+		<Location_Northing>165869</Location_Northing>
+		<Location_Longitude>0.097685</Location_Longitude>
+		<Location_Latitude>51.373088</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="61">
+		<Direction>1</Direction>
+		<Location_Easting>546089</Location_Easting>
+		<Location_Northing>165866</Location_Northing>
+		<Location_Longitude>0.097497</Location_Longitude>
+		<Location_Latitude>51.373064</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="62">
+		<Direction>1</Direction>
+		<Location_Easting>546067</Location_Easting>
+		<Location_Northing>165879</Location_Northing>
+		<Location_Longitude>0.097187</Location_Longitude>
+		<Location_Latitude>51.373187</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="63">
+		<Direction>1</Direction>
+		<Location_Easting>546000</Location_Easting>
+		<Location_Northing>165880</Location_Northing>
+		<Location_Longitude>0.096225</Location_Longitude>
+		<Location_Latitude>51.373213</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="64">
+		<Direction>1</Direction>
+		<Location_Easting>545959</Location_Easting>
+		<Location_Northing>165871</Location_Northing>
+		<Location_Longitude>0.095633</Location_Longitude>
+		<Location_Latitude>51.373143</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="65">
+		<Direction>1</Direction>
+		<Location_Easting>545876</Location_Easting>
+		<Location_Northing>165822</Location_Northing>
+		<Location_Longitude>0.094421</Location_Longitude>
+		<Location_Latitude>51.372724</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="66">
+		<Direction>1</Direction>
+		<Location_Easting>545763</Location_Easting>
+		<Location_Northing>165725</Location_Northing>
+		<Location_Longitude>0.092759</Location_Longitude>
+		<Location_Latitude>51.371881</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="67">
+		<Direction>1</Direction>
+		<Location_Easting>545742</Location_Easting>
+		<Location_Northing>165715</Location_Northing>
+		<Location_Longitude>0.092454</Location_Longitude>
+		<Location_Latitude>51.371797</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="68">
+		<Direction>1</Direction>
+		<Location_Easting>545666</Location_Easting>
+		<Location_Northing>165714</Location_Northing>
+		<Location_Longitude>0.091362</Location_Longitude>
+		<Location_Latitude>51.371807</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="69">
+		<Direction>1</Direction>
+		<Location_Easting>545596</Location_Easting>
+		<Location_Northing>165742</Location_Northing>
+		<Location_Longitude>0.090369</Location_Longitude>
+		<Location_Latitude>51.372077</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="70">
+		<Direction>1</Direction>
+		<Location_Easting>545537</Location_Easting>
+		<Location_Northing>165873</Location_Northing>
+		<Location_Longitude>0.089575</Location_Longitude>
+		<Location_Latitude>51.373269</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="71">
+		<Direction>1</Direction>
+		<Location_Easting>545551</Location_Easting>
+		<Location_Northing>165894</Location_Northing>
+		<Location_Longitude>0.089785</Location_Longitude>
+		<Location_Latitude>51.373454</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="72">
+		<Direction>1</Direction>
+		<Location_Easting>545551</Location_Easting>
+		<Location_Northing>165911</Location_Northing>
+		<Location_Longitude>0.089792</Location_Longitude>
+		<Location_Latitude>51.373607</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="73">
+		<Direction>1</Direction>
+		<Location_Easting>545534</Location_Easting>
+		<Location_Northing>165933</Location_Northing>
+		<Location_Longitude>0.089557</Location_Longitude>
+		<Location_Latitude>51.373809</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="74">
+		<Direction>1</Direction>
+		<Location_Easting>545522</Location_Easting>
+		<Location_Northing>165936</Location_Northing>
+		<Location_Longitude>0.089386</Location_Longitude>
+		<Location_Latitude>51.373839</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="75">
+		<Direction>1</Direction>
+		<Location_Easting>545516</Location_Easting>
+		<Location_Northing>165925</Location_Northing>
+		<Location_Longitude>0.089295</Location_Longitude>
+		<Location_Latitude>51.373741</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="76">
+		<Direction>1</Direction>
+		<Location_Easting>545545</Location_Easting>
+		<Location_Northing>165881</Location_Northing>
+		<Location_Longitude>0.089694</Location_Longitude>
+		<Location_Latitude>51.373339</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="77">
+		<Direction>1</Direction>
+		<Location_Easting>545546</Location_Easting>
+		<Location_Northing>165852</Location_Northing>
+		<Location_Longitude>0.089696</Location_Longitude>
+		<Location_Latitude>51.373078</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="78">
+		<Direction>1</Direction>
+		<Location_Easting>545596</Location_Easting>
+		<Location_Northing>165742</Location_Northing>
+		<Location_Longitude>0.090369</Location_Longitude>
+		<Location_Latitude>51.372077</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="79">
+		<Direction>1</Direction>
+		<Location_Easting>545666</Location_Easting>
+		<Location_Northing>165714</Location_Northing>
+		<Location_Longitude>0.091362</Location_Longitude>
+		<Location_Latitude>51.371807</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="80">
+		<Direction>1</Direction>
+		<Location_Easting>545720</Location_Easting>
+		<Location_Northing>165713</Location_Northing>
+		<Location_Longitude>0.092137</Location_Longitude>
+		<Location_Latitude>51.371784</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="81">
+		<Direction>1</Direction>
+		<Location_Easting>545776</Location_Easting>
+		<Location_Northing>165639</Location_Northing>
+		<Location_Longitude>0.092911</Location_Longitude>
+		<Location_Latitude>51.371105</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="82">
+		<Direction>1</Direction>
+		<Location_Easting>545964</Location_Easting>
+		<Location_Northing>165286</Location_Northing>
+		<Location_Longitude>0.095465</Location_Longitude>
+		<Location_Latitude>51.367885</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="83">
+		<Direction>1</Direction>
+		<Location_Easting>545975</Location_Easting>
+		<Location_Northing>165277</Location_Northing>
+		<Location_Longitude>0.095619</Location_Longitude>
+		<Location_Latitude>51.367801</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="84">
+		<Direction>1</Direction>
+		<Location_Easting>545969</Location_Easting>
+		<Location_Northing>165252</Location_Northing>
+		<Location_Longitude>0.095523</Location_Longitude>
+		<Location_Latitude>51.367578</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="85">
+		<Direction>1</Direction>
+		<Location_Easting>545977</Location_Easting>
+		<Location_Northing>165250</Location_Northing>
+		<Location_Longitude>0.095637</Location_Longitude>
+		<Location_Latitude>51.367558</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="86">
+		<Direction>1</Direction>
+		<Location_Easting>546116</Location_Easting>
+		<Location_Northing>165017</Location_Northing>
+		<Location_Longitude>0.097537</Location_Longitude>
+		<Location_Latitude>51.365429</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="87">
+		<Direction>1</Direction>
+		<Location_Easting>546151</Location_Easting>
+		<Location_Northing>164936</Location_Northing>
+		<Location_Longitude>0.098006</Location_Longitude>
+		<Location_Latitude>51.364692</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="88">
+		<Direction>1</Direction>
+		<Location_Easting>546213</Location_Easting>
+		<Location_Northing>164833</Location_Northing>
+		<Location_Longitude>0.098853</Location_Longitude>
+		<Location_Latitude>51.363751</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="89">
+		<Direction>1</Direction>
+		<Location_Easting>546295</Location_Easting>
+		<Location_Northing>164727</Location_Northing>
+		<Location_Longitude>0.099987</Location_Longitude>
+		<Location_Latitude>51.362777</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="90">
+		<Direction>1</Direction>
+		<Location_Easting>546489</Location_Easting>
+		<Location_Northing>164535</Location_Northing>
+		<Location_Longitude>0.102693</Location_Longitude>
+		<Location_Latitude>51.361002</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="91">
+		<Direction>1</Direction>
+		<Location_Easting>546530</Location_Easting>
+		<Location_Northing>164528</Location_Northing>
+		<Location_Longitude>0.103278</Location_Longitude>
+		<Location_Latitude>51.360928</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="92">
+		<Direction>1</Direction>
+		<Location_Easting>546946</Location_Easting>
+		<Location_Northing>164557</Location_Northing>
+		<Location_Longitude>0.109261</Location_Longitude>
+		<Location_Latitude>51.361081</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="93">
+		<Direction>1</Direction>
+		<Location_Easting>547176</Location_Easting>
+		<Location_Northing>164601</Location_Northing>
+		<Location_Longitude>0.112580</Location_Longitude>
+		<Location_Latitude>51.361417</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="94">
+		<Direction>1</Direction>
+		<Location_Easting>547218</Location_Easting>
+		<Location_Northing>164594</Location_Northing>
+		<Location_Longitude>0.113180</Location_Longitude>
+		<Location_Latitude>51.361344</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="95">
+		<Direction>1</Direction>
+		<Location_Easting>547197</Location_Easting>
+		<Location_Northing>164531</Location_Northing>
+		<Location_Longitude>0.112853</Location_Longitude>
+		<Location_Latitude>51.360783</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="96">
+		<Direction>1</Direction>
+		<Location_Easting>547089</Location_Easting>
+		<Location_Northing>164370</Location_Northing>
+		<Location_Longitude>0.111236</Location_Longitude>
+		<Location_Latitude>51.359364</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="97">
+		<Direction>1</Direction>
+		<Location_Easting>546906</Location_Easting>
+		<Location_Northing>164165</Location_Northing>
+		<Location_Longitude>0.108525</Location_Longitude>
+		<Location_Latitude>51.357569</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="98">
+		<Direction>1</Direction>
+		<Location_Easting>546905</Location_Easting>
+		<Location_Northing>164130</Location_Northing>
+		<Location_Longitude>0.108496</Location_Longitude>
+		<Location_Latitude>51.357255</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="99">
+		<Direction>1</Direction>
+		<Location_Easting>546682</Location_Easting>
+		<Location_Northing>164125</Location_Northing>
+		<Location_Longitude>0.105294</Location_Longitude>
+		<Location_Latitude>51.357268</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="100">
+		<Direction>1</Direction>
+		<Location_Easting>546719</Location_Easting>
+		<Location_Northing>164073</Location_Northing>
+		<Location_Longitude>0.105803</Location_Longitude>
+		<Location_Latitude>51.356791</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="101">
+		<Direction>1</Direction>
+		<Location_Easting>546591</Location_Easting>
+		<Location_Northing>163974</Location_Northing>
+		<Location_Longitude>0.103926</Location_Longitude>
+		<Location_Latitude>51.355935</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="102">
+		<Direction>1</Direction>
+		<Location_Easting>546106</Location_Easting>
+		<Location_Northing>163657</Location_Northing>
+		<Location_Longitude>0.096836</Location_Longitude>
+		<Location_Latitude>51.353211</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="103">
+		<Direction>1</Direction>
+		<Location_Easting>546020</Location_Easting>
+		<Location_Northing>163621</Location_Northing>
+		<Location_Longitude>0.095587</Location_Longitude>
+		<Location_Latitude>51.352909</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="104">
+		<Direction>1</Direction>
+		<Location_Easting>546006</Location_Easting>
+		<Location_Northing>163605</Location_Northing>
+		<Location_Longitude>0.095379</Location_Longitude>
+		<Location_Latitude>51.352769</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="105">
+		<Direction>1</Direction>
+		<Location_Easting>545958</Location_Easting>
+		<Location_Northing>163641</Location_Northing>
+		<Location_Longitude>0.094705</Location_Longitude>
+		<Location_Latitude>51.353105</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="106">
+		<Direction>1</Direction>
+		<Location_Easting>545930</Location_Easting>
+		<Location_Northing>163694</Location_Northing>
+		<Location_Longitude>0.094325</Location_Longitude>
+		<Location_Latitude>51.353589</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="107">
+		<Direction>1</Direction>
+		<Location_Easting>545880</Location_Easting>
+		<Location_Northing>163951</Location_Northing>
+		<Location_Longitude>0.093713</Location_Longitude>
+		<Location_Latitude>51.355911</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="108">
+		<Direction>1</Direction>
+		<Location_Easting>545851</Location_Easting>
+		<Location_Northing>163966</Location_Northing>
+		<Location_Longitude>0.093302</Location_Longitude>
+		<Location_Latitude>51.356053</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="109">
+		<Direction>1</Direction>
+		<Location_Easting>545568</Location_Easting>
+		<Location_Northing>163939</Location_Northing>
+		<Location_Longitude>0.089230</Location_Longitude>
+		<Location_Latitude>51.355883</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="110">
+		<Direction>1</Direction>
+		<Location_Easting>545603</Location_Easting>
+		<Location_Northing>163827</Location_Northing>
+		<Location_Longitude>0.089687</Location_Longitude>
+		<Location_Latitude>51.354867</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="111">
+		<Direction>1</Direction>
+		<Location_Easting>545613</Location_Easting>
+		<Location_Northing>163694</Location_Northing>
+		<Location_Longitude>0.089776</Location_Longitude>
+		<Location_Latitude>51.353670</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="112">
+		<Direction>1</Direction>
+		<Location_Easting>545599</Location_Easting>
+		<Location_Northing>163501</Location_Northing>
+		<Location_Longitude>0.089496</Location_Longitude>
+		<Location_Latitude>51.351939</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="113">
+		<Direction>1</Direction>
+		<Location_Easting>545589</Location_Easting>
+		<Location_Northing>163433</Location_Northing>
+		<Location_Longitude>0.089325</Location_Longitude>
+		<Location_Latitude>51.351331</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="114">
+		<Direction>1</Direction>
+		<Location_Easting>545583</Location_Easting>
+		<Location_Northing>163382</Location_Northing>
+		<Location_Longitude>0.089218</Location_Longitude>
+		<Location_Latitude>51.350874</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="115">
+		<Direction>1</Direction>
+		<Location_Easting>545580</Location_Easting>
+		<Location_Northing>163349</Location_Northing>
+		<Location_Longitude>0.089161</Location_Longitude>
+		<Location_Latitude>51.350578</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="1" aSequence_No="116">
+		<Direction>1</Direction>
+		<Location_Easting>545579</Location_Easting>
+		<Location_Northing>163336</Location_Northing>
+		<Location_Longitude>0.089142</Location_Longitude>
+		<Location_Latitude>51.350462</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="1">
+		<Direction>2</Direction>
+		<Location_Easting>545599</Location_Easting>
+		<Location_Northing>163533</Location_Northing>
+		<Location_Longitude>0.089509</Location_Longitude>
+		<Location_Latitude>51.352227</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="2">
+		<Direction>2</Direction>
+		<Location_Easting>545606</Location_Easting>
+		<Location_Northing>163604</Location_Northing>
+		<Location_Longitude>0.089639</Location_Longitude>
+		<Location_Latitude>51.352863</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="3">
+		<Direction>2</Direction>
+		<Location_Easting>545613</Location_Easting>
+		<Location_Northing>163694</Location_Northing>
+		<Location_Longitude>0.089776</Location_Longitude>
+		<Location_Latitude>51.353670</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="4">
+		<Direction>2</Direction>
+		<Location_Easting>545603</Location_Easting>
+		<Location_Northing>163827</Location_Northing>
+		<Location_Longitude>0.089687</Location_Longitude>
+		<Location_Latitude>51.354867</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="5">
+		<Direction>2</Direction>
+		<Location_Easting>545568</Location_Easting>
+		<Location_Northing>163939</Location_Northing>
+		<Location_Longitude>0.089230</Location_Longitude>
+		<Location_Latitude>51.355883</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="6">
+		<Direction>2</Direction>
+		<Location_Easting>545851</Location_Easting>
+		<Location_Northing>163966</Location_Northing>
+		<Location_Longitude>0.093302</Location_Longitude>
+		<Location_Latitude>51.356053</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="7">
+		<Direction>2</Direction>
+		<Location_Easting>545880</Location_Easting>
+		<Location_Northing>163951</Location_Northing>
+		<Location_Longitude>0.093713</Location_Longitude>
+		<Location_Latitude>51.355911</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="8">
+		<Direction>2</Direction>
+		<Location_Easting>545930</Location_Easting>
+		<Location_Northing>163694</Location_Northing>
+		<Location_Longitude>0.094325</Location_Longitude>
+		<Location_Latitude>51.353589</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="9">
+		<Direction>2</Direction>
+		<Location_Easting>545958</Location_Easting>
+		<Location_Northing>163641</Location_Northing>
+		<Location_Longitude>0.094705</Location_Longitude>
+		<Location_Latitude>51.353105</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="10">
+		<Direction>2</Direction>
+		<Location_Easting>546006</Location_Easting>
+		<Location_Northing>163605</Location_Northing>
+		<Location_Longitude>0.095379</Location_Longitude>
+		<Location_Latitude>51.352769</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="11">
+		<Direction>2</Direction>
+		<Location_Easting>546020</Location_Easting>
+		<Location_Northing>163621</Location_Northing>
+		<Location_Longitude>0.095587</Location_Longitude>
+		<Location_Latitude>51.352909</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="12">
+		<Direction>2</Direction>
+		<Location_Easting>546106</Location_Easting>
+		<Location_Northing>163657</Location_Northing>
+		<Location_Longitude>0.096836</Location_Longitude>
+		<Location_Latitude>51.353211</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="13">
+		<Direction>2</Direction>
+		<Location_Easting>546591</Location_Easting>
+		<Location_Northing>163974</Location_Northing>
+		<Location_Longitude>0.103926</Location_Longitude>
+		<Location_Latitude>51.355935</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="14">
+		<Direction>2</Direction>
+		<Location_Easting>546719</Location_Easting>
+		<Location_Northing>164073</Location_Northing>
+		<Location_Longitude>0.105803</Location_Longitude>
+		<Location_Latitude>51.356791</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="15">
+		<Direction>2</Direction>
+		<Location_Easting>546682</Location_Easting>
+		<Location_Northing>164125</Location_Northing>
+		<Location_Longitude>0.105294</Location_Longitude>
+		<Location_Latitude>51.357268</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="16">
+		<Direction>2</Direction>
+		<Location_Easting>546905</Location_Easting>
+		<Location_Northing>164130</Location_Northing>
+		<Location_Longitude>0.108496</Location_Longitude>
+		<Location_Latitude>51.357255</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="17">
+		<Direction>2</Direction>
+		<Location_Easting>546906</Location_Easting>
+		<Location_Northing>164165</Location_Northing>
+		<Location_Longitude>0.108525</Location_Longitude>
+		<Location_Latitude>51.357569</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="18">
+		<Direction>2</Direction>
+		<Location_Easting>547089</Location_Easting>
+		<Location_Northing>164370</Location_Northing>
+		<Location_Longitude>0.111236</Location_Longitude>
+		<Location_Latitude>51.359364</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="19">
+		<Direction>2</Direction>
+		<Location_Easting>547197</Location_Easting>
+		<Location_Northing>164531</Location_Northing>
+		<Location_Longitude>0.112853</Location_Longitude>
+		<Location_Latitude>51.360783</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="20">
+		<Direction>2</Direction>
+		<Location_Easting>547218</Location_Easting>
+		<Location_Northing>164594</Location_Northing>
+		<Location_Longitude>0.113180</Location_Longitude>
+		<Location_Latitude>51.361344</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="21">
+		<Direction>2</Direction>
+		<Location_Easting>547176</Location_Easting>
+		<Location_Northing>164601</Location_Northing>
+		<Location_Longitude>0.112580</Location_Longitude>
+		<Location_Latitude>51.361417</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="22">
+		<Direction>2</Direction>
+		<Location_Easting>546946</Location_Easting>
+		<Location_Northing>164557</Location_Northing>
+		<Location_Longitude>0.109261</Location_Longitude>
+		<Location_Latitude>51.361081</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="23">
+		<Direction>2</Direction>
+		<Location_Easting>546530</Location_Easting>
+		<Location_Northing>164528</Location_Northing>
+		<Location_Longitude>0.103278</Location_Longitude>
+		<Location_Latitude>51.360928</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="24">
+		<Direction>2</Direction>
+		<Location_Easting>546489</Location_Easting>
+		<Location_Northing>164535</Location_Northing>
+		<Location_Longitude>0.102693</Location_Longitude>
+		<Location_Latitude>51.361002</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="25">
+		<Direction>2</Direction>
+		<Location_Easting>546295</Location_Easting>
+		<Location_Northing>164727</Location_Northing>
+		<Location_Longitude>0.099987</Location_Longitude>
+		<Location_Latitude>51.362777</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="26">
+		<Direction>2</Direction>
+		<Location_Easting>546213</Location_Easting>
+		<Location_Northing>164833</Location_Northing>
+		<Location_Longitude>0.098853</Location_Longitude>
+		<Location_Latitude>51.363751</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="27">
+		<Direction>2</Direction>
+		<Location_Easting>546151</Location_Easting>
+		<Location_Northing>164936</Location_Northing>
+		<Location_Longitude>0.098006</Location_Longitude>
+		<Location_Latitude>51.364692</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="28">
+		<Direction>2</Direction>
+		<Location_Easting>546116</Location_Easting>
+		<Location_Northing>165017</Location_Northing>
+		<Location_Longitude>0.097537</Location_Longitude>
+		<Location_Latitude>51.365429</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="29">
+		<Direction>2</Direction>
+		<Location_Easting>545977</Location_Easting>
+		<Location_Northing>165250</Location_Northing>
+		<Location_Longitude>0.095637</Location_Longitude>
+		<Location_Latitude>51.367558</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="30">
+		<Direction>2</Direction>
+		<Location_Easting>545969</Location_Easting>
+		<Location_Northing>165252</Location_Northing>
+		<Location_Longitude>0.095523</Location_Longitude>
+		<Location_Latitude>51.367578</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="31">
+		<Direction>2</Direction>
+		<Location_Easting>545975</Location_Easting>
+		<Location_Northing>165277</Location_Northing>
+		<Location_Longitude>0.095619</Location_Longitude>
+		<Location_Latitude>51.367801</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="32">
+		<Direction>2</Direction>
+		<Location_Easting>545964</Location_Easting>
+		<Location_Northing>165286</Location_Northing>
+		<Location_Longitude>0.095465</Location_Longitude>
+		<Location_Latitude>51.367885</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="33">
+		<Direction>2</Direction>
+		<Location_Easting>545776</Location_Easting>
+		<Location_Northing>165639</Location_Northing>
+		<Location_Longitude>0.092911</Location_Longitude>
+		<Location_Latitude>51.371105</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="34">
+		<Direction>2</Direction>
+		<Location_Easting>545720</Location_Easting>
+		<Location_Northing>165713</Location_Northing>
+		<Location_Longitude>0.092137</Location_Longitude>
+		<Location_Latitude>51.371784</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="35">
+		<Direction>2</Direction>
+		<Location_Easting>545666</Location_Easting>
+		<Location_Northing>165714</Location_Northing>
+		<Location_Longitude>0.091362</Location_Longitude>
+		<Location_Latitude>51.371807</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="36">
+		<Direction>2</Direction>
+		<Location_Easting>545596</Location_Easting>
+		<Location_Northing>165742</Location_Northing>
+		<Location_Longitude>0.090369</Location_Longitude>
+		<Location_Latitude>51.372077</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="37">
+		<Direction>2</Direction>
+		<Location_Easting>545537</Location_Easting>
+		<Location_Northing>165873</Location_Northing>
+		<Location_Longitude>0.089575</Location_Longitude>
+		<Location_Latitude>51.373269</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="38">
+		<Direction>2</Direction>
+		<Location_Easting>545551</Location_Easting>
+		<Location_Northing>165894</Location_Northing>
+		<Location_Longitude>0.089785</Location_Longitude>
+		<Location_Latitude>51.373454</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="39">
+		<Direction>2</Direction>
+		<Location_Easting>545551</Location_Easting>
+		<Location_Northing>165911</Location_Northing>
+		<Location_Longitude>0.089792</Location_Longitude>
+		<Location_Latitude>51.373607</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="40">
+		<Direction>2</Direction>
+		<Location_Easting>545534</Location_Easting>
+		<Location_Northing>165933</Location_Northing>
+		<Location_Longitude>0.089557</Location_Longitude>
+		<Location_Latitude>51.373809</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="41">
+		<Direction>2</Direction>
+		<Location_Easting>545522</Location_Easting>
+		<Location_Northing>165936</Location_Northing>
+		<Location_Longitude>0.089386</Location_Longitude>
+		<Location_Latitude>51.373839</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="42">
+		<Direction>2</Direction>
+		<Location_Easting>545516</Location_Easting>
+		<Location_Northing>165925</Location_Northing>
+		<Location_Longitude>0.089295</Location_Longitude>
+		<Location_Latitude>51.373741</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="43">
+		<Direction>2</Direction>
+		<Location_Easting>545543</Location_Easting>
+		<Location_Northing>165875</Location_Northing>
+		<Location_Longitude>0.089662</Location_Longitude>
+		<Location_Latitude>51.373285</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="44">
+		<Direction>2</Direction>
+		<Location_Easting>545546</Location_Easting>
+		<Location_Northing>165852</Location_Northing>
+		<Location_Longitude>0.089696</Location_Longitude>
+		<Location_Latitude>51.373078</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="45">
+		<Direction>2</Direction>
+		<Location_Easting>545596</Location_Easting>
+		<Location_Northing>165742</Location_Northing>
+		<Location_Longitude>0.090369</Location_Longitude>
+		<Location_Latitude>51.372077</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="46">
+		<Direction>2</Direction>
+		<Location_Easting>545666</Location_Easting>
+		<Location_Northing>165714</Location_Northing>
+		<Location_Longitude>0.091362</Location_Longitude>
+		<Location_Latitude>51.371807</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="47">
+		<Direction>2</Direction>
+		<Location_Easting>545742</Location_Easting>
+		<Location_Northing>165715</Location_Northing>
+		<Location_Longitude>0.092454</Location_Longitude>
+		<Location_Latitude>51.371797</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="48">
+		<Direction>2</Direction>
+		<Location_Easting>545763</Location_Easting>
+		<Location_Northing>165725</Location_Northing>
+		<Location_Longitude>0.092759</Location_Longitude>
+		<Location_Latitude>51.371881</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="49">
+		<Direction>2</Direction>
+		<Location_Easting>545876</Location_Easting>
+		<Location_Northing>165822</Location_Northing>
+		<Location_Longitude>0.094421</Location_Longitude>
+		<Location_Latitude>51.372724</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="50">
+		<Direction>2</Direction>
+		<Location_Easting>545996</Location_Easting>
+		<Location_Northing>165888</Location_Northing>
+		<Location_Longitude>0.096171</Location_Longitude>
+		<Location_Latitude>51.373286</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="51">
+		<Direction>2</Direction>
+		<Location_Easting>546084</Location_Easting>
+		<Location_Northing>165891</Location_Northing>
+		<Location_Longitude>0.097436</Location_Longitude>
+		<Location_Latitude>51.373290</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="52">
+		<Direction>2</Direction>
+		<Location_Easting>546171</Location_Easting>
+		<Location_Northing>166071</Location_Northing>
+		<Location_Longitude>0.098759</Location_Longitude>
+		<Location_Latitude>51.374885</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="53">
+		<Direction>2</Direction>
+		<Location_Easting>546229</Location_Easting>
+		<Location_Northing>166237</Location_Northing>
+		<Location_Longitude>0.099660</Location_Longitude>
+		<Location_Latitude>51.376362</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="54">
+		<Direction>2</Direction>
+		<Location_Easting>546281</Location_Easting>
+		<Location_Northing>166358</Location_Northing>
+		<Location_Longitude>0.100456</Location_Longitude>
+		<Location_Latitude>51.377436</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="55">
+		<Direction>2</Direction>
+		<Location_Easting>546374</Location_Easting>
+		<Location_Northing>166512</Location_Northing>
+		<Location_Longitude>0.101855</Location_Longitude>
+		<Location_Latitude>51.378796</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="56">
+		<Direction>2</Direction>
+		<Location_Easting>546466</Location_Easting>
+		<Location_Northing>166637</Location_Northing>
+		<Location_Longitude>0.103227</Location_Longitude>
+		<Location_Latitude>51.379895</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="57">
+		<Direction>2</Direction>
+		<Location_Easting>546395</Location_Easting>
+		<Location_Northing>166791</Location_Northing>
+		<Location_Longitude>0.102271</Location_Longitude>
+		<Location_Latitude>51.381297</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="58">
+		<Direction>2</Direction>
+		<Location_Easting>546446</Location_Easting>
+		<Location_Northing>166915</Location_Northing>
+		<Location_Longitude>0.103054</Location_Longitude>
+		<Location_Latitude>51.382398</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="59">
+		<Direction>2</Direction>
+		<Location_Easting>546572</Location_Easting>
+		<Location_Northing>166916</Location_Northing>
+		<Location_Longitude>0.104864</Location_Longitude>
+		<Location_Latitude>51.382374</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="60">
+		<Direction>2</Direction>
+		<Location_Easting>546604</Location_Easting>
+		<Location_Northing>166909</Location_Northing>
+		<Location_Longitude>0.105321</Location_Longitude>
+		<Location_Latitude>51.382303</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="61">
+		<Direction>2</Direction>
+		<Location_Easting>546636</Location_Easting>
+		<Location_Northing>166890</Location_Northing>
+		<Location_Longitude>0.105773</Location_Longitude>
+		<Location_Latitude>51.382124</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="62">
+		<Direction>2</Direction>
+		<Location_Easting>546671</Location_Easting>
+		<Location_Northing>166855</Location_Northing>
+		<Location_Longitude>0.106261</Location_Longitude>
+		<Location_Latitude>51.381801</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="63">
+		<Direction>2</Direction>
+		<Location_Easting>546710</Location_Easting>
+		<Location_Northing>166865</Location_Northing>
+		<Location_Longitude>0.106825</Location_Longitude>
+		<Location_Latitude>51.381881</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="64">
+		<Direction>2</Direction>
+		<Location_Easting>546774</Location_Easting>
+		<Location_Northing>166918</Location_Northing>
+		<Location_Longitude>0.107766</Location_Longitude>
+		<Location_Latitude>51.382340</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="65">
+		<Direction>2</Direction>
+		<Location_Easting>546743</Location_Easting>
+		<Location_Northing>167061</Location_Northing>
+		<Location_Longitude>0.107380</Location_Longitude>
+		<Location_Latitude>51.383633</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="66">
+		<Direction>2</Direction>
+		<Location_Easting>546746</Location_Easting>
+		<Location_Northing>167168</Location_Northing>
+		<Location_Longitude>0.107467</Location_Longitude>
+		<Location_Latitude>51.384594</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="67">
+		<Direction>2</Direction>
+		<Location_Easting>546757</Location_Easting>
+		<Location_Northing>167220</Location_Northing>
+		<Location_Longitude>0.107646</Location_Longitude>
+		<Location_Latitude>51.385058</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="68">
+		<Direction>2</Direction>
+		<Location_Easting>546870</Location_Easting>
+		<Location_Northing>167564</Location_Northing>
+		<Location_Longitude>0.109411</Location_Longitude>
+		<Location_Latitude>51.388120</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="69">
+		<Direction>2</Direction>
+		<Location_Easting>547011</Location_Easting>
+		<Location_Northing>168195</Location_Northing>
+		<Location_Longitude>0.111698</Location_Longitude>
+		<Location_Latitude>51.393753</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="70">
+		<Direction>2</Direction>
+		<Location_Easting>547023</Location_Easting>
+		<Location_Northing>168339</Location_Northing>
+		<Location_Longitude>0.111929</Location_Longitude>
+		<Location_Latitude>51.395044</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="71">
+		<Direction>2</Direction>
+		<Location_Easting>546990</Location_Easting>
+		<Location_Northing>168348</Location_Northing>
+		<Location_Longitude>0.111459</Location_Longitude>
+		<Location_Latitude>51.395133</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="72">
+		<Direction>2</Direction>
+		<Location_Easting>546722</Location_Easting>
+		<Location_Northing>168345</Location_Northing>
+		<Location_Longitude>0.107608</Location_Longitude>
+		<Location_Latitude>51.395176</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="73">
+		<Direction>2</Direction>
+		<Location_Easting>546691</Location_Easting>
+		<Location_Northing>168372</Location_Northing>
+		<Location_Longitude>0.107174</Location_Longitude>
+		<Location_Latitude>51.395426</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="74">
+		<Direction>2</Direction>
+		<Location_Easting>546697</Location_Easting>
+		<Location_Northing>168389</Location_Northing>
+		<Location_Longitude>0.107268</Location_Longitude>
+		<Location_Latitude>51.395577</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="75">
+		<Direction>2</Direction>
+		<Location_Easting>546682</Location_Easting>
+		<Location_Northing>168551</Location_Northing>
+		<Location_Longitude>0.107119</Location_Longitude>
+		<Location_Latitude>51.397037</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="76">
+		<Direction>2</Direction>
+		<Location_Easting>546693</Location_Easting>
+		<Location_Northing>168591</Location_Northing>
+		<Location_Longitude>0.107293</Location_Longitude>
+		<Location_Latitude>51.397393</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="77">
+		<Direction>2</Direction>
+		<Location_Easting>546637</Location_Easting>
+		<Location_Northing>168632</Location_Northing>
+		<Location_Longitude>0.106506</Location_Longitude>
+		<Location_Latitude>51.397776</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="78">
+		<Direction>2</Direction>
+		<Location_Easting>546592</Location_Easting>
+		<Location_Northing>168642</Location_Northing>
+		<Location_Longitude>0.105864</Location_Longitude>
+		<Location_Latitude>51.397878</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="79">
+		<Direction>2</Direction>
+		<Location_Easting>546530</Location_Easting>
+		<Location_Northing>168631</Location_Northing>
+		<Location_Longitude>0.104968</Location_Longitude>
+		<Location_Latitude>51.397795</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="80">
+		<Direction>2</Direction>
+		<Location_Easting>546485</Location_Easting>
+		<Location_Northing>168606</Location_Northing>
+		<Location_Longitude>0.104312</Location_Longitude>
+		<Location_Latitude>51.397582</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="81">
+		<Direction>2</Direction>
+		<Location_Easting>546424</Location_Easting>
+		<Location_Northing>168554</Location_Northing>
+		<Location_Longitude>0.103414</Location_Longitude>
+		<Location_Latitude>51.397131</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="82">
+		<Direction>2</Direction>
+		<Location_Easting>546399</Location_Easting>
+		<Location_Northing>168548</Location_Northing>
+		<Location_Longitude>0.103053</Location_Longitude>
+		<Location_Latitude>51.397083</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="83">
+		<Direction>2</Direction>
+		<Location_Easting>546268</Location_Easting>
+		<Location_Northing>168610</Location_Northing>
+		<Location_Longitude>0.101196</Location_Longitude>
+		<Location_Latitude>51.397674</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="84">
+		<Direction>2</Direction>
+		<Location_Easting>546196</Location_Easting>
+		<Location_Northing>168654</Location_Northing>
+		<Location_Longitude>0.100180</Location_Longitude>
+		<Location_Latitude>51.398088</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="85">
+		<Direction>2</Direction>
+		<Location_Easting>546136</Location_Easting>
+		<Location_Northing>168664</Location_Northing>
+		<Location_Longitude>0.099322</Location_Longitude>
+		<Location_Latitude>51.398193</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="86">
+		<Direction>2</Direction>
+		<Location_Easting>545914</Location_Easting>
+		<Location_Northing>168751</Location_Northing>
+		<Location_Longitude>0.096169</Location_Longitude>
+		<Location_Latitude>51.399032</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="87">
+		<Direction>2</Direction>
+		<Location_Easting>545828</Location_Easting>
+		<Location_Northing>168793</Location_Northing>
+		<Location_Longitude>0.094951</Location_Longitude>
+		<Location_Latitude>51.399431</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="88">
+		<Direction>2</Direction>
+		<Location_Easting>545753</Location_Easting>
+		<Location_Northing>168807</Location_Northing>
+		<Location_Longitude>0.093879</Location_Longitude>
+		<Location_Latitude>51.399577</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="89">
+		<Direction>2</Direction>
+		<Location_Easting>545475</Location_Easting>
+		<Location_Northing>168899</Location_Northing>
+		<Location_Longitude>0.089923</Location_Longitude>
+		<Location_Latitude>51.400475</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="90">
+		<Direction>2</Direction>
+		<Location_Easting>545351</Location_Easting>
+		<Location_Northing>168961</Location_Northing>
+		<Location_Longitude>0.088167</Location_Longitude>
+		<Location_Latitude>51.401064</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="91">
+		<Direction>2</Direction>
+		<Location_Easting>545450</Location_Easting>
+		<Location_Northing>169268</Location_Northing>
+		<Location_Longitude>0.089715</Location_Longitude>
+		<Location_Latitude>51.403797</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="92">
+		<Direction>2</Direction>
+		<Location_Easting>545500</Location_Easting>
+		<Location_Northing>169351</Location_Northing>
+		<Location_Longitude>0.090467</Location_Longitude>
+		<Location_Latitude>51.404530</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="93">
+		<Direction>2</Direction>
+		<Location_Easting>545589</Location_Easting>
+		<Location_Northing>169433</Location_Northing>
+		<Location_Longitude>0.091780</Location_Longitude>
+		<Location_Latitude>51.405244</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="94">
+		<Direction>2</Direction>
+		<Location_Easting>545791</Location_Easting>
+		<Location_Northing>169563</Location_Northing>
+		<Location_Longitude>0.094735</Location_Longitude>
+		<Location_Latitude>51.406360</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="95">
+		<Direction>2</Direction>
+		<Location_Easting>545878</Location_Easting>
+		<Location_Northing>169644</Location_Northing>
+		<Location_Longitude>0.096018</Location_Longitude>
+		<Location_Latitude>51.407065</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="96">
+		<Direction>2</Direction>
+		<Location_Easting>545938</Location_Easting>
+		<Location_Northing>169594</Location_Northing>
+		<Location_Longitude>0.096860</Location_Longitude>
+		<Location_Latitude>51.406601</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="97">
+		<Direction>2</Direction>
+		<Location_Easting>545974</Location_Easting>
+		<Location_Northing>169506</Location_Northing>
+		<Location_Longitude>0.097341</Location_Longitude>
+		<Location_Latitude>51.405801</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="98">
+		<Direction>2</Direction>
+		<Location_Easting>546019</Location_Easting>
+		<Location_Northing>169447</Location_Northing>
+		<Location_Longitude>0.097963</Location_Longitude>
+		<Location_Latitude>51.405259</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="99">
+		<Direction>2</Direction>
+		<Location_Easting>546065</Location_Easting>
+		<Location_Northing>169417</Location_Northing>
+		<Location_Longitude>0.098612</Location_Longitude>
+		<Location_Latitude>51.404977</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="100">
+		<Direction>2</Direction>
+		<Location_Easting>546101</Location_Easting>
+		<Location_Northing>169404</Location_Northing>
+		<Location_Longitude>0.099124</Location_Longitude>
+		<Location_Latitude>51.404851</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="101">
+		<Direction>2</Direction>
+		<Location_Easting>546431</Location_Easting>
+		<Location_Northing>169349</Location_Northing>
+		<Location_Longitude>0.103842</Location_Longitude>
+		<Location_Latitude>51.404272</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="102">
+		<Direction>2</Direction>
+		<Location_Easting>546455</Location_Easting>
+		<Location_Northing>169500</Location_Northing>
+		<Location_Longitude>0.104249</Location_Longitude>
+		<Location_Latitude>51.405623</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="103">
+		<Direction>2</Direction>
+		<Location_Easting>546462</Location_Easting>
+		<Location_Northing>169628</Location_Northing>
+		<Location_Longitude>0.104403</Location_Longitude>
+		<Location_Latitude>51.406771</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="104">
+		<Direction>2</Direction>
+		<Location_Easting>546440</Location_Easting>
+		<Location_Northing>169849</Location_Northing>
+		<Location_Longitude>0.104178</Location_Longitude>
+		<Location_Latitude>51.408762</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="105">
+		<Direction>2</Direction>
+		<Location_Easting>546650</Location_Easting>
+		<Location_Northing>169869</Location_Northing>
+		<Location_Longitude>0.107203</Location_Longitude>
+		<Location_Latitude>51.408888</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="106">
+		<Direction>2</Direction>
+		<Location_Easting>546629</Location_Easting>
+		<Location_Northing>169954</Location_Northing>
+		<Location_Longitude>0.106936</Location_Longitude>
+		<Location_Latitude>51.409657</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="107">
+		<Direction>2</Direction>
+		<Location_Easting>546555</Location_Easting>
+		<Location_Northing>170041</Location_Northing>
+		<Location_Longitude>0.105909</Location_Longitude>
+		<Location_Latitude>51.410458</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="108">
+		<Direction>2</Direction>
+		<Location_Easting>546584</Location_Easting>
+		<Location_Northing>170069</Location_Northing>
+		<Location_Longitude>0.106338</Location_Longitude>
+		<Location_Latitude>51.410702</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="109">
+		<Direction>2</Direction>
+		<Location_Easting>546610</Location_Easting>
+		<Location_Northing>170110</Location_Northing>
+		<Location_Longitude>0.106728</Location_Longitude>
+		<Location_Latitude>51.411064</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="110">
+		<Direction>2</Direction>
+		<Location_Easting>546623</Location_Easting>
+		<Location_Northing>170181</Location_Northing>
+		<Location_Longitude>0.106944</Location_Longitude>
+		<Location_Latitude>51.411698</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="111">
+		<Direction>2</Direction>
+		<Location_Easting>546598</Location_Easting>
+		<Location_Northing>170326</Location_Northing>
+		<Location_Longitude>0.106645</Location_Longitude>
+		<Location_Latitude>51.413007</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="112">
+		<Direction>2</Direction>
+		<Location_Easting>546578</Location_Easting>
+		<Location_Northing>170372</Location_Northing>
+		<Location_Longitude>0.106376</Location_Longitude>
+		<Location_Latitude>51.413426</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="113">
+		<Direction>2</Direction>
+		<Location_Easting>546551</Location_Easting>
+		<Location_Northing>170397</Location_Northing>
+		<Location_Longitude>0.105999</Location_Longitude>
+		<Location_Latitude>51.413658</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="114">
+		<Direction>2</Direction>
+		<Location_Easting>546522</Location_Easting>
+		<Location_Northing>170410</Location_Northing>
+		<Location_Longitude>0.105588</Location_Longitude>
+		<Location_Latitude>51.413782</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="115">
+		<Direction>2</Direction>
+		<Location_Easting>546478</Location_Easting>
+		<Location_Northing>170416</Location_Northing>
+		<Location_Longitude>0.104958</Location_Longitude>
+		<Location_Latitude>51.413847</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="116">
+		<Direction>2</Direction>
+		<Location_Easting>546450</Location_Easting>
+		<Location_Northing>170407</Location_Northing>
+		<Location_Longitude>0.104552</Location_Longitude>
+		<Location_Latitude>51.413774</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="117">
+		<Direction>2</Direction>
+		<Location_Easting>546437</Location_Easting>
+		<Location_Northing>170392</Location_Northing>
+		<Location_Longitude>0.104359</Location_Longitude>
+		<Location_Latitude>51.413642</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="118">
+		<Direction>2</Direction>
+		<Location_Easting>546377</Location_Easting>
+		<Location_Northing>170155</Location_Northing>
+		<Location_Longitude>0.103399</Location_Longitude>
+		<Location_Latitude>51.411528</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="119">
+		<Direction>2</Direction>
+		<Location_Easting>546386</Location_Easting>
+		<Location_Northing>170136</Location_Northing>
+		<Location_Longitude>0.103520</Location_Longitude>
+		<Location_Latitude>51.411355</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="120">
+		<Direction>2</Direction>
+		<Location_Easting>546474</Location_Easting>
+		<Location_Northing>170107</Location_Northing>
+		<Location_Longitude>0.104773</Location_Longitude>
+		<Location_Latitude>51.411072</Location_Latitude>
+	</Route_Geometry>
+	<Route_Geometry aContract_Line_No="VR1" aLBSL_Run_No="2" aSequence_No="121">
+		<Direction>2</Direction>
+		<Location_Easting>546490</Location_Easting>
+		<Location_Northing>170099</Location_Northing>
+		<Location_Longitude>0.104999</Location_Longitude>
+		<Location_Latitude>51.410996</Location_Latitude>
+	</Route_Geometry>
+</rg:Network_Data>

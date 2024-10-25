@@ -3,7 +3,7 @@ from torch_geometric.data import HeteroData
 import argparse
 
 parser = argparse.ArgumentParser(description='Train a hetero-GNN for land use identification.')
-parser.add_argument('--data_path', type=str, default='data/processed/data_homo.pt', help='Path to the data file.')
+parser.add_argument('--data_path', type=str, default='data/processed/outer/data_homo.pt', help='Path to the data file.')
 args = parser.parse_args()
 data_path = args.data_path
 data = torch.load(data_path)
@@ -29,7 +29,7 @@ for i, edge_type in enumerate(edge_types):
     hetero_data['node', edge_type, 'node'].edge_index = edge_indices
     hetero_data['node', edge_type, 'node'].edge_attr = data['edge_attr'][mask, 0]  # Assume the first dimension is the feature of the edge
 
-data_path = 'data/processed/data_hetero.pt'
+data_path = 'data/processed/outer/data_hetero.pt'
 torch.save(hetero_data, data_path)
 print(hetero_data)
 

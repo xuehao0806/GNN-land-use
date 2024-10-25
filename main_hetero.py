@@ -5,7 +5,7 @@ from torch_geometric.nn import HGTConv, Linear
 from utils import evaluation
 import pandas as pd
 
-data = torch.load('data/processed/data_hetero.pt')
+data = torch.load('data/processed/outer/data_hetero.pt')
 # print(f"Data objects: {data}")
 kwargs = {'batch_size': 64, 'num_workers': 0, 'persistent_workers': False}
 # Creating heterogeneous graph training, validation, and test loaders
@@ -43,7 +43,7 @@ class HGT(torch.nn.Module):
 
         return self.lin(x_dict['node'])
 
-model = HGT(hidden_channels=64, out_channels=6, num_heads=2, num_layers=2)
+model = HGT(hidden_channels=512, out_channels=6, num_heads=2, num_layers=2)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 data, model = data.to(device), model.to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=0.002)
@@ -82,7 +82,7 @@ for epoch in range(1, 201):
 
 model_name = 'HGT'
 loader_name = 'HGTLoader'
-model_save_path = 'models/'
+model_save_path = 'models/outer/'
 results = evaluation(model_name, model, test_loader, device)
 torch.save(model.state_dict(), f'{model_save_path}{model_name}_{loader_name}.pth')
 print(results)
@@ -91,26 +91,26 @@ print(results)
 # def calculate_residuals(model, loader):
 #     model.eval()  # Switch to evaluation mode
 #     residuals = []
-
+#
 #     for batch in loader:
 #         batch = batch.to(device)
 #         pred = model(batch.x_dict, batch.edge_index_dict)  # Model prediction
 #         true = batch['node'].y.float()  # True labels
-
+#
 #         # Calculate residuals: the difference between predictions and true values
 #         residual = (pred - true).cpu().numpy()  # Move to CPU and convert to NumPy array
 #         residuals.extend(residual)
-
+#
 #     # Combine all residuals into a DataFrame
 #     residuals_df = pd.DataFrame(residuals, columns=['office', 'sustenance', 'transport', 'retail', 'leisure', 'residence'])
 #     return residuals_df
-
+#
 # # Modify batch size, if memory is sufficient, can load all nodes at once
 # kwargs = {'batch_size': 4236, 'num_workers': 0, 'persistent_workers': False}
-
+#
 # # Create a loader to load the entire dataset
 # full_loader = HGTLoader(data, num_samples={'node': [4236]}, shuffle=False,
 #                         input_nodes=('node', torch.ones(data['node'].num_nodes, dtype=bool)), **kwargs)
-
+#
 # residuals_df = calculate_residuals(model, full_loader)
 # residuals_df.to_csv(f'./visualisation/residual/{model_name}_{loader_name}.csv')

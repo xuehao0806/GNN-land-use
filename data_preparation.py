@@ -7,9 +7,15 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 # 1. load nodes features data
 # 1.1 basic features
-bike_features = pd.read_csv('data/inputs/bike_15mins_filtered.csv')
-bus_features = pd.read_csv('data/inputs/bus_15mins_filtered.csv')
-tube_features = pd.read_csv('data/inputs/train_15mins_filtered.csv')
+region = 'outer'
+if region == 'inner':
+    bike_features = pd.read_csv('data/inputs/inner/bike_15mins_filtered.csv')
+    bus_features = pd.read_csv('data/inputs/inner/bus_15mins_filtered.csv')
+    tube_features = pd.read_csv('data/inputs/inner/train_15mins_filtered.csv')
+elif region == 'outer':
+    bike_features = pd.read_csv('data/inputs/outer/bike_15mins_filtered_outer.csv')
+    bus_features = pd.read_csv('data/inputs/outer/bus_15mins_filtered_outer.csv')
+    tube_features = pd.read_csv('data/inputs/outer/train_15mins_filtered_outer.csv')
 # 1.2 add nodes_type features
 bike_features['TransportType'] = 'bike'
 bus_features['TransportType'] = 'bus'
@@ -25,15 +31,23 @@ X_scaled = scaler.fit_transform(X)
 # 2. load labels data
 # 2.1 six types of land use labels
 label_columns_list = ['office',	'sustenance', 'transport',	'retail', 'leisure', 'residence']
-bike_labels = pd.read_csv('data/label/0-1_processed_merged_bikelocation_POI_filtered_wr.csv')
-bus_labels = pd.read_csv('data/label/0-1_processed_merged_buslocation_POI_filtered_wr.csv')
-tube_labels = pd.read_csv('data/label/0-1_processed_merged_trainlocation_POI_filtered_wr.csv')
+if region == 'inner':
+    bike_labels = pd.read_csv('data/label/inner/0-1_processed_merged_bikelocation_POI_filtered_wr.csv')
+    bus_labels = pd.read_csv('data/label/inner/0-1_processed_merged_buslocation_POI_filtered_wr.csv')
+    tube_labels = pd.read_csv('data/label/inner/0-1_processed_merged_trainlocation_POI_filtered_wr.csv')
+elif region == 'outer':
+    bike_labels = pd.read_csv('data/label/outer/0-1_processed_merged_bikelocation_POI_filtered_outer_wr.csv')
+    bus_labels = pd.read_csv('data/label/outer/0-1_processed_merged_buslocation_POI_filtered_outer_wr.csv')
+    tube_labels = pd.read_csv('data/label/outer/0-1_processed_merged_trainlocation_POI_filtered_outer_wr.csv')
 # 2.2 combine labels (for homo-graph)
 combined_label = pd.concat([bike_labels, bus_labels, tube_labels], ignore_index=True)
 # 2.3 normalisation
 y = combined_label[label_columns_list].values
 # 2.4 normalisationLoad edge data and create edge_index tensor
-adj_matrix_highway = pd.read_csv("data/edge/real_knn_edges_highway.csv")
+if region == 'inner':
+    adj_matrix_highway = pd.read_csv("data/edge/real_knn_edges_highway.csv")
+elif region == 'outer':
+    adj_matrix_highway = pd.read_csv("data/edge/real_knn_edges_highway_outer.csv")
 edge_index_np = np.vstack([adj_matrix_highway["Start"].values, adj_matrix_highway["End"].values])
 edge_index = torch.tensor(edge_index_np, dtype=torch.long)
 
@@ -54,6 +68,9 @@ data.train_mask = torch.tensor(np.isin(np.arange(data.num_nodes), train_idx), dt
 data.val_mask = torch.tensor(np.isin(np.arange(data.num_nodes), val_idx), dtype=torch.bool)
 data.test_mask = torch.tensor(np.isin(np.arange(data.num_nodes), test_idx), dtype=torch.bool)
 # 3.4 Save processed data and print its contents
-data_path = 'data/processed/data_homo.pt'
+if region == 'inner':
+    data_path = 'data/processed/inner/data_homo.pt'
+elif region == 'outer':
+    data_path = 'data/processed/outer/data_homo.pt'
 torch.save(data, data_path)
 print(f"Data objects: {data}")
