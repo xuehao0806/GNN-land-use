@@ -1,169 +1,81 @@
-# GNN-land-use
 
-## Update on 2024-03-20
-## Summary
-- **Adding Hetero-edges information**
-- **MinMax Normalisation**
+# Heterogeneous Graph Neural Networks with Post-hoc Explanations for Multi-modal and Explainable Land Use Inference
 
-**RGCN**
+This repository contains the implementation of the paper **"Heterogeneous Graph Neural Networks with Post-hoc Explanations for Multi-modal and Explainable Land Use Inference."** The project focuses on land use inference using heterogeneous graph neural networks (HGT) and includes detailed post-hoc explanations through feature attribution and counterfactual analysis.
 
-| RGCN       | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.003 | 0.051 | 0.035 | 0.915 |
-| sustenance | 0.002 | 0.044 | 0.031 | 0.939 |
-| transport  | 0.003 | 0.054 | 0.039 | 0.927 |
-| retail     | 0.004 | 0.065 | 0.046 | 0.865 |
-| leisure    | 0.005 | 0.069 | 0.051 | 0.844 |
-| residence  | 0.005 | 0.070 | 0.051 | 0.866 |
+## Project Structure
 
-**NN**
+- **Data Processing**
+  - We process daily boarding/alighting data from various transportation modes (e.g., tube, bus) within London.
+  - Features are standardized using z-score normalization, and edge features are constructed using walking routes between stations.
+  - POI data is used to calculate land use density for each node (zone).
 
-|  NN        | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.015 | 0.124 | 0.086 | 0.484 |
-| sustenance | 0.013 | 0.116 | 0.079 | 0.581 |
-| transport  | 0.019 | 0.139 | 0.097 | 0.514 |
-| retail     | 0.018 | 0.134 | 0.103 | 0.417 |
-| leisure    | 0.020 | 0.141 | 0.106 | 0.342 |
-| residence  | 0.025 | 0.158 | 0.123 | 0.310 |
+- **Graph Construction**
+  - We build heterogeneous graphs using nodes (representing locations) and edges (representing travel connections). Node features are derived from mobility data, and edge features are based on transportation networks.
+  
+- **Model Training**
+  - The heterogeneous graph neural network (HGT) is implemented using PyTorch Geometric (PyG). The model is trained on land use prediction tasks, with performance evaluated on multiple datasets.
 
-**GCN**
+- **Post-hoc Explanations**
+  - We modify PyG’s Captum API to enable feature attribution for multi-target regression tasks using Integrated Gradients.
+  - Counterfactual explanations are implemented to explore how changes in input data affect land use type predictions.
 
-| GCN        | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.004 | 0.060 | 0.043 | 0.881 |
-| sustenance | 0.002 | 0.046 | 0.033 | 0.935 |
-| transport  | 0.004 | 0.063 | 0.046 | 0.900 |
-| retail     | 0.006 | 0.077 | 0.057 | 0.812 |
-| leisure    | 0.007 | 0.086 | 0.064 | 0.753 |
-| residence  | 0.007 | 0.083 | 0.062 | 0.809 |
+## Installation Instructions
 
-**GAT**
+### Prerequisites
+To install the necessary dependencies, refer to the `requirements.txt` file. You can create the environment using the following command:
 
-|  GAT       | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.003 | 0.054 | 0.039 | 0.904 |
-| sustenance | 0.002 | 0.039 | 0.028 | 0.952 |
-| transport  | 0.003 | 0.054 | 0.039 | 0.927 |
-| retail     | 0.005 | 0.068 | 0.050 | 0.851 |
-| leisure    | 0.006 | 0.080 | 0.058 | 0.789 |
-| residence  | 0.006 | 0.074 | 0.054 | 0.847 |
+```bash
+conda create --name <env_name> --file requirements.txt
+```
 
-**GraphSage**
+### Modifying PyTorch Geometric for Multi-target Regression Explanations
 
-|  GraphSage | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.003 | 0.058 | 0.043 | 0.887 |
-| sustenance | 0.002 | 0.045 | 0.032 | 0.938 |
-| transport  | 0.003 | 0.059 | 0.043 | 0.912 |
-| retail     | 0.005 | 0.070 | 0.053 | 0.841 |
-| leisure    | 0.007 | 0.083 | 0.060 | 0.773 |
-| residence  | 0.006 | 0.078 | 0.058 | 0.831 |
-## Update on 2024-03-18
-- **Name**: Xuehao
-- **Date of Update**: 2024-03-18
+We made modifications to the original PyTorch Geometric package to adapt it for multi-target regression tasks. These adjustments allow us to compute explanations (e.g., feature attribution) in this context. To install our custom version of PyG:
 
-## Summary
-- **Change the way for collection of 'Residence'**
-- **Update the road network graph**
-- **Normalised each label in a same way**
+1. First, uninstall the original `torch_geometric` package:
+   
+   ```bash
+   pip uninstall torch-geometric
+   ```
 
-## Performance
+2. Then, install the forked version from GitHub:
 
-- NN
- - No edge-related information.
+   ```bash
+   git clone https://github.com/adamdejl/pytorch_geometric
+   cd pytorch_geometric
+   pip install -e .
+   ```
 
-| Category    | MSE   | RMSE  | MAE   | R2    |
-|-------------|-------|-------|-------|-------|
-| office      | 0.503 | 0.709 | 0.460 | 0.475 |
-| sustenance  | 0.418 | 0.647 | 0.424 | 0.577 |
-| transport   | 0.499 | 0.706 | 0.477 | 0.487 |
-| retail      | 0.588 | 0.767 | 0.577 | 0.430 |
-| leisure     | 0.658 | 0.811 | 0.603 | 0.309 |
-| residence   | 0.676 | 0.822 | 0.640 | 0.324 |
+   **Note:** The current implementation does not fully support feature attributions for RGCN models due to issues with the `edge_types` argument in the explanation logic. We recommend experimenting with homograph models or exploring fixes for this issue.
 
- - GCN.
- - No edge-related information.
+## Project Workflow
 
-|            | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.137 | 0.371 | 0.265 | 0.856 |
-| sustenance | 0.097 | 0.312 | 0.219 | 0.901 |
-| transport  | 0.148 | 0.385 | 0.274 | 0.847 |
-| retail     | 0.194 | 0.440 | 0.325 | 0.811 |
-| leisure    | 0.254 | 0.504 | 0.374 | 0.735 |
-| residence  | 0.205 | 0.453 | 0.334 | 0.795 |
+### 1. Data Preparation
+Scripts for preparing the data, including normalization and feature extraction:
 
- - GraphSage.
- - No edge-related information.
+- `processing_input_1_selected_inner_london.py`: Prepares the input mobility data for nodes.
+- `processing_graph_1_road_types.py`: Processes edge features such as road types and walking distances.
+- `data_preparation.py`: Standardizes features and prepares the dataset for graph construction.
 
-| Category    | MSE   | RMSE  | MAE   | R2    |
-|-------------|-------|-------|-------|-------|
-| office      | 0.109 | 0.330 | 0.240 | 0.886 |
-| sustenance  | 0.068 | 0.261 | 0.185 | 0.931 |
-| transport   | 0.112 | 0.335 | 0.240 | 0.884 |
-| retail      | 0.170 | 0.412 | 0.309 | 0.835 |
-| leisure     | 0.230 | 0.480 | 0.361 | 0.759 |
-| residence   | 0.187 | 0.433 | 0.322 | 0.813 |
+### 2. Graph Construction
+Scripts for building heterogeneous graphs:
 
-## Summary
+- `data_preparation_hetero.py`: Constructs heterogeneous subgraphs.
+- `main_hetero.py`: Defines the data loaders for training, validation, and testing.
 
-- **Adding simple forward neural network as baseline model**
+### 3. Model Training
+Scripts related to the model definition and training:
 
-- **Using the previous strategy of processing data splitting**
+- `models.py`: Contains the HGT class with layers of HGT-Conv, residual connections, and an MLP for final prediction.
+- `main_hetero.py`: Trains and tests the HGT model.
 
-## Performance
- - Simple Neural Network.
- - With same parameter setting of other models.
- - No edge-related information.
+### 4. Explainability
+Scripts for implementing post-hoc explanations:
 
-| Category    | MSE   | RMSE  | MAE   | R2    |
-|-------------|-------|-------|-------|-------|
-| office      | 0.156 | 0.396 | 0.270 | 0.423 |
-| leisure     | 0.089 | 0.298 | 0.223 | 0.366 |
-| transport   | 0.173 | 0.417 | 0.288 | 0.452 |
-| retail      | 0.219 | 0.469 | 0.353 | 0.435 |
-| sustenance  | 0.321 | 0.567 | 0.373 | 0.552 |
-| residence   | 0.115 | 0.340 | 0.223 | 0.175 |
+- `pytorch_geometric.py`: Modified PyG's Captum API for multi-target regression.
+- `explainability_FA.py`: Generates feature attribution explanations using Integrated Gradients.
+- `counterfactual_explanation.py`: Provides counterfactual explanations compatible with HGT models.
 
-
- - GraghSage (with Neighbor-sampling) 
- - No isolation on test nodes
-
-| Category    | MSE   | RMSE  | MAE   | R2    |
-|-------------|-------|-------|-------|-------|
-| office      | 0.040 | 0.199 | 0.143 | 0.852 |
-| leisure     | 0.041 | 0.202 | 0.151 | 0.706 |
-| transport   | 0.048 | 0.218 | 0.161 | 0.848 |
-| retail      | 0.071 | 0.266 | 0.202 | 0.817 |
-| sustenance  | 0.058 | 0.242 | 0.170 | 0.918 |
-| residence   | 0.050 | 0.225 | 0.141 | 0.639 |
-
-## Update on 2024-03-02
-- **Name**: Xuehao
-- **Date of Update**: 2024-03-02
-
-## Summary
-
-- **Mini-batch Training Process**: Implemented a mini-batch method for graph data.
-
-- **Multiple Sampling Methods**: The update provides options for different sampling processes, allowing the selection between 'RandomNodes' and 'NeighborNodes'. 
-
-- **Isolation of Test Data**: To prevent data leakag. the test data has been isolated from the training dataset, following the suggestion from Adam.
-
-
-## Performance
-
- - GraghSage (with Neighbor-sampling) 
- - Batch size of 64 and epoch of 200.
-
-|            | MSE   | RMSE  | MAE   | R2    |
-|------------|-------|-------|-------|-------|
-| office     | 0.078 | 0.278 | 0.175 | 0.714 |
-| leisure    | 0.053 | 0.231 | 0.167 | 0.620 |
-| transport  | 0.067 | 0.259 | 0.176 | 0.788 |
-| retail     | 0.107 | 0.327 | 0.230 | 0.725 |
-| sustenance | 0.113 | 0.336 | 0.209 | 0.842 |
-| residence  | 0.086 | 0.293 | 0.168 | 0.390 |
-
-![training process](visualisation/loss_plot.png)
+## Notebooks
+A Jupyter notebook demonstrating how to compute GNN feature attributions using the implemented methods is included. You can find this notebook in the repository for more detailed usage examples.
