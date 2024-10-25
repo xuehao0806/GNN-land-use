@@ -3,6 +3,8 @@
 
 This repository contains the implementation of the paper **"Heterogeneous Graph Neural Networks with Post-hoc Explanations for Multi-modal and Explainable Land Use Inference."** The project focuses on land use inference using heterogeneous graph neural networks (HGT) and includes detailed post-hoc explanations through feature attribution and counterfactual analysis.
 
+You can read the full paper on [arXiv](https://arxiv.org/abs/2406.13724#).
+
 ## Project Structure
 
 - **Data Processing**
@@ -50,6 +52,10 @@ We made modifications to the original PyTorch Geometric package to adapt it for 
    **Note:** The current implementation does not fully support feature attributions for RGCN models due to issues with the `edge_types` argument in the explanation logic. We recommend experimenting with homograph models or exploring fixes for this issue.
 
 ## Project Workflow
+
+The overall workflow is visualized in the following figure, which outlines the entire pipeline from data preprocessing to model training and post-hoc explanation methods.
+
+![Workflow Visualization](visualisation/Detailed_methodology_flow charts.jpg)
 
 ### 1. Data Preparation
 Scripts for preparing the data, including normalization and feature extraction:
