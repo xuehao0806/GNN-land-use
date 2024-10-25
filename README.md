@@ -55,7 +55,7 @@ We made modifications to the original PyTorch Geometric package to adapt it for 
 
 The overall workflow is visualized in the following figure, which outlines the entire pipeline from data preprocessing to model training and post-hoc explanation methods.
 
-![Workflow Visualization](visualisation/Detailed_methodology_flow charts.jpg)
+![Workflow Visualization](visualisation/Detailed_methodology_flow_charts.jpg)
 
 ### 1. Data Preparation
 Scripts for preparing the data, including normalization and feature extraction:
